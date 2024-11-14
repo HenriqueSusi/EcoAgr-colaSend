@@ -1,0 +1,597 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --main-green: #0A5C36;  
+    --medium-green: #0A5C48;
+    --beige: #FFF4D8;
+    --dark1: #18392B;
+    --dark2: #024035;
+}
+
+.headerVendedor{
+    background-color: #0A5C36;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: white;
+    padding: 0px 10px;
+}
+
+.map_search1{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.map_search1 button{
+    background-color: var(--main-green);
+    color: white;
+    border: none;
+    width: 150px;
+    height: 30px;
+    border-radius: 150px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+
+::-webkit-scrollbar-track {
+    background: var(--dark1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--medium-green);
+}
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+#container a{
+    text-decoration:none ;
+    color: black;
+}
+
+#containerAgricultor a{
+    text-decoration:none ;
+    color: black;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    font-family: Roboto;
+    font-size: .9em;
+    width: 100%;
+}
+
+.title{
+    display: flex;
+}
+.rate{
+    display: flex;
+}
+.textAgericultor{
+    display: flex;
+}
+.containerText{
+    margin-left: 20px;
+}
+
+.profileAgricultor{
+    max-width: 150px;
+    border-radius:100% ;
+}
+
+.rate{
+    display: flex;
+    font-size: 1.1em;
+    align-items: center;
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    height: 100vh;
+    background-color: var(--main-green);
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    color: white;
+    overflow-y: hidden;
+}
+
+#sidebar-mobile{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--main-green);
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    color: white;
+    overflow-y: hidden;
+    z-index: 999;
+}
+
+#container{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 15%;
+    width: 85%;
+}
+
+#containerAgricultor{
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 100vh;
+}
+
+#logo{
+    width: 5rem;
+}
+
+#logocontainer{
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+    margin-right: 10px;
+    margin: 5px 0;
+}
+
+.navlink{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+.navitem{
+    margin-bottom: 25px;
+}
+
+.navlink:hover{
+    text-decoration: underline;
+}
+
+.line{
+    height: .01em;
+    background-color: #000;
+    width: 100%;
+}
+
+.pad{
+    margin: 10px 0;
+}
+
+.white{
+    background-color: #fff;
+}
+
+#nav{
+    margin-top: 20%;
+    margin-bottom: auto;
+    align-items: center;
+}
+
+#bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 15px;
+}
+
+.btn_style{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    width: 13em;
+    border-radius: 50px;
+    font-family: Roboto;
+}
+
+.btn_style:hover{
+    background-color: #fff;
+    color: var(--main-green);
+    cursor: pointer;
+}
+
+#SearchContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0px 0px 0px;
+}
+
+.input_search{
+    background-color: transparent;
+    font-family: Roboto;
+    border: none;
+    padding: 0 20px 0 0;
+    font-size: 0.6em;
+    outline: none;
+    width: 100%;
+}
+
+#box{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 400px;
+    height: 30px;
+}
+
+.iconsearch{
+    padding: 0px 10px;
+    font-size: 0.7em;
+}
+
+#card_agricultor{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1em;
+    width: 100%;
+}
+
+.card img{
+    width: 60%;
+    opacity: 0.8;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.card img:hover{
+    opacity: 1;
+}
+
+.card{
+    text-align: center;
+    margin-bottom: 30px;
+    width: 25%;
+    margin-top: 20px;
+}
+
+#header_mobile{
+    background-color: var(--main-green);
+    width: 100%;
+    height: 5em;
+    display: none;
+}
+
+.icon_menu{
+    font-size: 15px;
+    color: white;
+}
+
+.button_menu{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first{
+    margin-top: 60px;
+}
+
+/* Card Produto */
+
+#card{
+    background-color: white;
+    height: 320px;
+    width: 270px;
+    border-radius: 15px;
+    padding: 20px;
+    border: 0.5px black solid;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#imgcard{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#item{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#textc h2{
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: start;
+}
+
+#cardprice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cardprice span{
+    color: #0A5C48;
+}
+
+#cardprice p{
+    color: #3E3E3E;
+    font-size: 0.9em;
+}
+
+#card button{
+    margin-top: 20px;
+    width: 80%;
+    height: 40px;
+    background-color: var(--main-green);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+#cardline{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    margin-bottom: 50px;
+}
+
+/* Sobre */
+
+.aboutinfo{
+    display: flex;
+    width: 80%;
+    margin-top: 40px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutinfo h2{
+    margin-bottom: 15px;
+}
+
+.aboutinfo div{
+    width: 50%;
+}
+
+.aboutinfo .imgabout{
+    width: 50%;
+    text-align: end;
+}
+
+.aboutinfo .imgabout2{
+    width: 50%;
+    text-align: start;
+}
+
+.aboutinfo img{
+    width: 80%;
+}
+
+.member{
+    text-align: center;
+}
+
+.member span{
+    text-align: center;
+    font-size: .9em;
+}
+
+.member-line{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+}
+
+.member img{
+    width: 80%;
+    border-radius: 100%;
+    transition: all 0.8s ease;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.member img:hover{
+    transform: translateY(-20px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+.map_search{
+    display: flex;
+    align-items: center;
+}
+
+.map_search button{
+    height: 30px;
+    cursor: pointer;
+    background-color: var(--main-green);
+    width: 150px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+
+.map_search .seeMore{
+    height: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 110px;
+    color: var(--main-green);
+    border: 1px solid var(--main-green);
+    border-radius: 50px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.6ms ease;
+}
+
+.map_search .seeMore p{
+    margin-left: 5px;
+}
+
+.map_search .seeMore:hover{
+    height: 30px;
+    cursor: pointer;
+    background-color: var(--main-green);
+    width: 110px;
+    color: white;
+    border: 1px solid var(--main-green);
+    border-radius: 50px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: all 0.6ms ease;
+    fill: white;
+}
+
+
+
+.map_search svg{
+    margin-right: 2px;
+    font-size: medium;
+}
+
+
+.counterdiv{
+    background-color: #aeaeae;
+    padding: 10px;
+    height: 5px;
+    width: 80px !important;
+    margin-right: auto;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-y: hidden;
+}
+.counterdiv button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.sub{
+    text-decoration: underline;
+    padding: 10px 0px;
+}
+
+.itemtable{
+    width: 20%;
+}
+.itemtableFIRST{
+    width: 30%;
+}
+.itemtable2{
+    width: 23%;
+}
+
+.lineTable{
+    background-color: black;
+    height: 0.5px;
+    margin: 20px 0px;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgTable{
+    width: 20%;
+}
+
+.imgTable img{
+    width: 150px;
+    max-width: 150px;
+    margin: 0px;
+}
+
+.imgTable img{
+    max-width: 150px;
+    margin: 0px;
+}
+
+.contentTable{
+    width: 20%;
+}
+
+.contentTable2{
+    width: 23%;
+}
+
+.contentTableFIRST{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contentTableFIRST img{
+    width: 150px;
+    max-width: 150px;
+}
+
+.contentTableFIRST span{
+    font-size: 0.9em;
+    margin: 0;
+    color: #939393;
+    height: 10px;
+}
+
+.contentTable button{
+    background-color: #0A5C36;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50PX;
+    cursor: pointer;
+}

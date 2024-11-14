@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - testeNav</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/nav.css" />
+    <link rel="stylesheet" href="~/testeNav.styles.css" asp-append-version="true" />
+    
+</head>
+<body>
+    <header>
+        <div id="sidebar">
+            <div id="logocontainer">
+                <img src="~/img/Logo.svg" alt="Logo" id="logo">
+            </div>
+            <div class="line white"></div>
+            <div id="nav">
+                <!-- Home -->
+                <div class="navitem">
+                    <i class="fa-solid fa-house icon"></i>
+                    <a class="" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                </div>
+                <!-- Produtos -->
+                <div class="navitem">
+                    <i class="fa-solid fa-leaf icon"></i>
+                    <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+                </div>
+                <!-- Agricultores -->
+                <div class="navitem">
+                    <i class="fa-solid fa-user icon"></i>
+                    <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
+                </div>
+
+                <!-- Compras -->
+                <div class="navitem">
+                    <i class="bi bi-basket-fill icon"></i>
+                    <a class="" asp-area="" asp-controller="Carrinho" asp-action="Compras">Compras</a>
+                </div>
+                <!-- Carrinho -->
+                <div class="navitem">
+                    <i class="fa-solid fa-cart-shopping icon"></i>
+                    <a class="" asp-area="" asp-controller="Carrinho" asp-action="Index">Carrinho</a>
+                </div>
+                <!-- Sobre -->
+                <div class="navitem">
+                    <i class="bi bi-info-circle icon"></i>
+                    <a class="" asp-area="" asp-controller="About" asp-action="about">Sobre</a>
+                </div>
+            </div>
+            <div class="line white"></div>
+            <div id="bottom">
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </header>
+    <div id="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+<script src="https://kit.fontawesome.com/d566b63b60.js" crossorigin="anonymous"></script>
+</html>

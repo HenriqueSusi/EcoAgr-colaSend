@@ -1,0 +1,72 @@
+﻿
+@using Azure.Core
+@using Microsoft.AspNetCore.Identity
+@using testeNav.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        var fotoUser = "default.jpg";
+
+        if (user.foto != null)
+        {
+            fotoUser = user.foto;
+        }
+
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="~/img/@fotoUser" alt="Foto Usuario" class="rounded-circle" style="width: 8vh; height: 8vh; object-fit: cover;" />
+        </button>
+
+        <div class="modal-footer border-0 justify-content-center d-flex flex-column">
+            @{
+                string perfilLink;
+
+                // Verifica se o usuário é um vendedor
+                if (await UserManager.IsInRoleAsync(user, "Vendedor"))
+                {
+                    perfilLink = Url.Action("Index", "Produtos");
+                }
+                else
+                {
+                    // Se não for vendedor
+                    perfilLink = Url.Page("/Account/Manage/Index",
+                    pageHandler: null,
+                    values: new { area = "Identity" });
+                }
+            }
+
+            <!-- Botão que deve levar para o perfil -->
+            <a href="@perfilLink" class="btn btn-primary">Meu Perfil</a>
+            
+
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button class="btn">Sair</button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <a id="register" class="btn-register" asp-area="Identity" asp-page="/Account/Register">Cadastrar</a>
+        <a id="login" class="btn-register" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
+    }
+</ul>
+
+<style>
+    .btn-register{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 50px;
+        text-decoration: none;
+        margin: 10px 0px 0px 0px;
+        transition: all 0.4s ease;
+    }
+</style>

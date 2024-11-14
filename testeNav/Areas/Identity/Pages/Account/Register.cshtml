@@ -1,0 +1,228 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/register.css" />
+</head>
+
+<div class="main">
+
+    <div class="login">
+        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" enctype="multipart/form-data">
+            <h2>Cadastre-se</h2>
+            <p id="compText">
+                Cadastre-se e encontre os vendedores mais próximos de você.
+            </p>
+
+            <p id="vendText" style="display: none;">
+                Cadastre-se e encontre maior visibilidade para o seu negócio
+            </p>
+
+            <a href="#choose"><h3>Vamos Começar!</h3></a>
+
+            <div style="display: flex;" class="choose " id="choose">
+                <button type="button" class="btnLoja" id="btnLoja" style="width: 197px; margin-right: 10px; background-color: transparent; border: 1px solid var(--main-green); color: var(--main-green)">Loja</button>
+                <button type="button" id="btnPessoaFisica" style="width: 197px; border: 1px solid var(--main-green);">Pessoa Física</button>
+            </div>
+
+            <div asp-validation-summary="ModelOnly" role="alert"></div>
+
+            <div class="formInput" style="display: flex" id="ClienteName">
+                <label asp-for="Input.Nome">Nome*</label>
+                <input asp-for="Input.Nome" class="inputLogin" placeholder="Nome" />
+
+                <span asp-validation-for="Input.Nome" class="text-danger"></span>
+            </div>
+
+            <div class="half" style="display: none;" id="vendName">
+                <div class="formInput">
+                    <label asp-for="Input.Nome">Nome*</label>
+                    <input asp-for="Input.Nome" autocomplete="new-password" class="halfLogin" style="margin-right: 10px;"  placeholder="Nome" />
+                    <span asp-validation-for="Input.Nome" class="text-danger"></span>
+                </div>
+
+                <div class="formInput">
+                    <label asp-for="Input.Nome">Nome da Loja*</label>
+                    <input asp-for="Input.Nome" autocomplete="new-password" class="halfLogin" style="margin-right: 10px;"  placeholder="Fazenda Recanto Feliz" />
+                    <span asp-validation-for="Input.Nome" class="text-danger"></span>
+                </div>
+
+            </div>
+
+            <div class="half" style="display: flex;">
+                <div class="formInput">
+                    <label asp-for="Input.Password">Senha*</label>
+                    <input asp-for="Input.Password" autocomplete="new-password" class="halfLogin" style="margin-right: 10px;"  placeholder="Senha" />
+                    <span asp-validation-for="Input.Password"></span>
+                </div>
+
+                <div class="formInput" id="cpf" style="display: flex; flex-direction: column;">
+                    <label asp-for="Input.CPF">CPF*</label>
+                    <input asp-for="Input.CPF" placeholder="CPF" class="halfLogin" />
+                    <span asp-validation-for="Input.CPF"></span>
+                </div>
+
+                <div style="display: none; flex-direction: column; margin-top: 8px" id="cnpj">
+                    <label asp-for="Input.CNPJ">CNPJ*</label>
+                    <input asp-for="Input.CNPJ" placeholder="CNPJ" class="halfLogin" />
+
+                    <span asp-validation-for="Input.CNPJ" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="big" style="display: flex;">
+                <div class="formInput" style="margin-right:10px">
+                    <label asp-for="Input.Cidade">Cidade*</label>
+                    <input asp-for="Input.Cidade" type="text" placeholder="Cidade" class="inputLogin" style="width:650px;" />
+
+                    <span asp-validation-for="Input.Cidade"></span>
+                </div>
+
+                <div class="formInput">
+                    <label asp-for="Input.UF">UF*</label>
+                    <select asp-for="Input.UF" class="inputLogin" style="width:90px;" placeholder="UF">
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+
+
+                    </select>
+
+                    <span asp-validation-for="Input.UF" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="Input.TipodeUsuario" class="form-select">
+                    <option value="">Selecione o tipo de usuário</option>
+
+                    <option value="Vendedor">Vendedor</option>
+                    <option value="Cliente">Cliente</option>
+                </select>
+                <label asp-for="Input.TipodeUsuario">Tipo de Usuario</label>
+                <span asp-validation-for="Input.TipodeUsuario" class="text-danger"></span>
+            </div>
+
+            <div class="formInput">
+                <label asp-for="Input.Endereco">Endereço</label>
+                <input asp-for="Input.Endereco" class="inputLogin" placeholder="Endereço" />
+
+                <span asp-validation-for="Input.Endereco" class="text-danger"></span>
+            </div>
+
+            <div class="half" style="display: flex;">
+                <div class="formInput">
+                    <label asp-for="Input.Email">Email*</label>
+                    <input asp-for="Input.Email" autocomplete="new-password" class="halfLogin" style="margin-right: 10px;"  placeholder="nome@dominio.com" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="formInput">
+                    <label asp-for="Input.PhoneNumber">Telefone*</label>
+                    <input asp-for="Input.PhoneNumber" class="halfLogin" style="margin-right: 10px" autocomplete="username" placeholder="14 99199-9999" />
+
+                    <span asp-validation-for="Input.PhoneNumber"></span>
+                </div>
+            </div>
+
+            <center>
+                <div class="formInput">
+                    <input asp-for="Input.foto" type="file" name="imgUp" class="upFoto" />
+                </div>
+            </center>
+
+
+            <center>
+                <a asp-area="Identity" asp-page="/Account/Login" style="color: var(--main-green); text-decoration: underline;">Já tenho uma conta!</a>
+            </center>
+
+            <center>
+                <button id="registerSubmit" type="submit">Register</button>
+            </center>
+
+        </form>
+
+    </div>
+
+
+
+    <script>
+        document.getElementById("btnLoja").addEventListener("click", function () {
+            // Esconder o campo CPF
+            document.getElementById("cpf").style.display = "none";
+            // Mostrar o campo CNPJ
+            document.getElementById("cnpj").style.display = "flex";
+
+            document.getElementById("compText").style.display = "none";
+
+            document.getElementById("vendText").style.display = "flex";
+
+            document.getElementById("ClienteName").style.display = "none";
+
+            document.getElementById("vendName").style.display = "flex";
+
+            document.getElementById("btnLoja").style.backgroundColor = "var(--main-green)"
+            document.getElementById("btnLoja").style.color = "#fff"
+
+            document.getElementById("btnPessoaFisica").style.backgroundColor = "transparent"
+            document.getElementById("btnPessoaFisica").style.color = "var(--main-green)"
+        });
+    </script>
+
+
+    <script>
+        document.getElementById("btnPessoaFisica").addEventListener("click", function () {
+            // Mostrar o campo CPF
+            document.getElementById("cpf").style.display = "flex";
+            // Esconder o campo CNPJ
+            document.getElementById("cnpj").style.display = "none";
+
+            document.getElementById("compText").style.display = "flex";
+
+            document.getElementById("vendText").style.display = "none";
+
+            document.getElementById("ClienteName").style.display = "flex";
+
+            document.getElementById("vendName").style.display = "none";
+
+            document.getElementById("btnLoja").style.backgroundColor = "transparent"
+            document.getElementById("btnLoja").style.color = "var(--main-green)"
+
+            document.getElementById("btnPessoaFisica").style.backgroundColor = "var(--main-green)"
+            document.getElementById("btnPessoaFisica").style.color = "#fff"
+
+        });
+    </script>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

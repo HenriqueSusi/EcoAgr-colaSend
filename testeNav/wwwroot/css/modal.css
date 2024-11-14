@@ -1,0 +1,121 @@
+﻿:root {
+    --main-green: #0A5C36;
+    --medium-green: #0A5C48;
+    --beige: #FFF4D8;
+    --dark1: #18392B;
+    --dark2: #024035;
+}
+
+#modal{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: 1px solid var(--main-green);
+    margin-top: 5%;
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 30px;
+}
+
+.modal-body{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+
+.input-modal{
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    padding: 10px;
+    width: 95%;
+    border: 1px solid var(--main-green)
+}
+
+.text-modal {
+    border-radius: 5px;
+    height: 150px;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    width: 95%;
+}
+
+.modal-body label{
+    padding-top: 10px;
+}
+
+
+.height {
+    border: 1px solid var(--main-green);
+    border-radius: 15px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer
+}
+
+.btn-modal{
+    background-color: transparent;
+    display: flex;
+
+    border: 1px solid var(--main-green);
+    border-radius: 10px;
+    
+    width: 200px;
+    height: 50px;
+    
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    margin-left: 10px;
+    
+    cursor: pointer;
+    transition: .4s all ease;
+
+    
+}
+
+.btn-modal:hover{
+    background-color: var(--main-green);
+    color: white;
+}
+
+.line-modal {
+    display: flex;
+    align-items: center;
+    margin-top: 10px
+}
+
+.img-div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-modals{
+    background-color: var(--main-green);
+    display: flex;
+    border: 1px solid var(--main-green);
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .4s all ease;
+    color: white;
+}
+
+.btn-modals:hover {
+    background-color: transparent;
+    color: black;
+}

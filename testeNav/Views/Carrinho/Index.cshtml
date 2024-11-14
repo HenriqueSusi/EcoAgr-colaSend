@@ -1,0 +1,153 @@
+﻿@model CarrinhoModel
+
+<body>
+    <head>
+        <link rel="stylesheet" href="~/css/carrinho.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+
+    <div id="main">
+        <p class="first hidden">Carrinho</p>
+        <div class="line pad hidden"></div>
+
+        <div class="table">
+            <div id="text">
+                <div class="content">
+                    <p>Produto</p>
+                </div>
+                <div class="content">
+                    <p>Preço</p>
+                </div>
+                <div class="content">
+                    <p>Quantidade</p>
+                </div>
+                <div class="content">
+                    <p>Total</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="line pad hidden"></div>
+
+        @foreach (var item in Model.Itens)
+        {
+            <div id="item-@item.Produto.Id" style="margin-bottom: 20px; display:flex;">
+                <div class="content">
+                    <div >
+                        <img style="width: 100%; height: 100%; text-align: center; object-fit: cover; border-radius: 10px;" src="@item.Produto.ImagemUrl">
+                    </div>
+
+                    <div class="prodText" style="width: 100%">
+                        <p>@item.Produto.Nome</p>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p><span data-preco="@item.Produto.Preco">@item.Produto.Preco.ToString("C")</span></p>
+                </div>
+
+                <div class="content">
+                    <div class="counter">
+                        <div class="minus">
+                            <i class="fa-solid fa-minus" onclick="decrement(@item.Produto.Id)"></i>
+                        </div>
+
+                        <div id="counter-@item.Produto.Id">@item.Quantidade</div>
+
+                        <div class="plus">
+                            <i class="fa-solid fa-plus" onclick="increment(@item.Produto.Id, @item.Produto.Quantidade)"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    <p><span id="total-@item.Produto.Id" class="total-item">@item.PrecoTotal.ToString("C")</span></p>
+
+                    <form asp-action="RemoverDoCarrinho" method="post">
+                        <input type="hidden" name="produtoId" value="@item.Produto.Id" />
+                        <button type="submit" class="btn btn-danger">Remover</button>
+                    </form>
+                </div>
+            </div>
+        }
+
+        <div style="margin-top: 50px; margin-left: 65%;">
+            <h3 id="total-geral">Total: @Model.Total.ToString("C")</h3>
+            <a href="@Url.Action("Checkout", "Carrinho")" id="btn">Finalizar Compra</a>
+        </div>
+    </div>
+
+    <script>
+        function atualizarPrecoTotal(itemId) {
+            let item = document.getElementById('item-' + itemId);
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent);
+            let precoUnitario = parseFloat(item.querySelector('[data-preco]').getAttribute('data-preco'));
+            let precoTotal = quantidade * precoUnitario;
+
+            item.querySelector('#total-' + itemId).textContent = precoTotal.toFixed(2).replace('.', ',');
+
+            atualizarTotalGeral();
+        }
+
+        function atualizarTotalGeral() {
+            let totais = document.querySelectorAll('.total-item');
+            let totalGeral = 0;
+
+            totais.forEach(function (totalElement) {
+                let valorItem = parseFloat(totalElement.textContent.replace('R$', '').replace(',', '.'));
+                if (!isNaN(valorItem)) {
+                    totalGeral += valorItem;
+                }
+            });
+
+            document.getElementById('total-geral').textContent = 'Total: R$ ' + totalGeral.toFixed(2).replace('.', ',');
+        }
+
+        function increment(itemId, estoqueDisponivel) {
+            let item = document.getElementById('item-' + itemId);
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent);
+
+            if (quantidade < estoqueDisponivel) {
+                item.querySelector('#counter-' + itemId).textContent = quantidade + 1;
+                atualizarPrecoTotal(itemId);
+            } else {
+                alert("Quantidade máxima disponível em estoque atingida.");
+            }
+        }
+
+        function decrement(itemId) {
+            let item = document.getElementById('item-' + itemId);
+            let quantidade = parseInt(item.querySelector('#counter-' + itemId).textContent);
+
+            if (quantidade > 1) {
+                item.querySelector('#counter-' + itemId).textContent = quantidade - 1;
+                atualizarPrecoTotal(itemId);
+            } else if (quantidade === 1) {
+                item.querySelector('#counter-' + itemId).textContent = 0;
+                atualizarPrecoTotal(itemId);
+                removerDoCarrinho(itemId);
+            }
+        }
+
+        function removerDoCarrinho(itemId) {
+            let item = document.getElementById('item-' + itemId);
+
+            fetch('/Carrinho/RemoverDoCarrinho', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ produtoId: itemId })
+            })
+                .then(response => {
+                    if (response.ok) {
+                        item.remove();
+                        atualizarTotalGeral();
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro ao remover produto:', error);
+                });
+        }
+    </script>
+</body>

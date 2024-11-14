@@ -1,0 +1,154 @@
+@import url(basic.css);
+@import url(responsiveHome.css);
+:root{
+    --main-green: #0A5C36;  
+    --medium-green: #0A5C48;
+    --beige: #FFF4D8;
+    --dark1: #18392B;
+    --dark2: #024035;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login{
+    width: 80%;
+    border: 1px solid var(--medium-green);
+    border-radius: 25px;
+    display: flex;
+    height: 80%;
+}
+
+#form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.inputLog input{
+    width: 95%;
+    height: 40px;
+    border: 1px solid var(--medium-green);
+    border-radius: 5px;
+    padding: 0px 0px 0px 20px;
+}
+
+.titleLog{
+    font-weight: normal;
+}
+
+#login h4{
+    color: #4A4A4A;
+}
+
+.imgContainer{
+    width: 50%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.imgLogin{
+    width: 100%;
+    height: 100%;
+}
+
+.buttonLog{
+    background-color: var(--main-green);
+    height: 50px;
+    color: white;
+    border: 1px solid var(--main-green);
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.buttonLog:hover{
+    background-color: var(--dark1);
+    height: 50px;
+    color: white;
+    border: 1px solid var(--dark1);
+    width: 70%;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: .4s all;
+}
+
+.bottomLog{
+    margin-top: 20px;
+    text-align: center;
+}
+
+#container a{
+    margin: 20px 0px 20px;
+    color: var(--main-green);
+    text-decoration: underline;
+}
+
+.inputname{
+    color: var(--main-green);
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.split{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 900px) {
+    .imgContainer{
+        display: none;
+        width: 0%;
+        height: 0%;
+        overflow-y: hidden;
+    }
+
+    #form{
+        width: 100%;
+        height: 600px;
+        overflow-y: hidden;
+    }
+
+    .titleLog{
+        margin-top: 50px;
+    }
+
+    .inputLog input{
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .imgContainer{
+        display: none;
+        width: 0%;
+        height: 0%;
+        overflow-y: hidden;
+    }
+
+    #form{
+        width: 100%;
+        height: 600px;
+        overflow-y: hidden;
+    }
+
+    #form a{
+        font-size: 0.8em;
+    }
+
+    .titleLog{
+        margin-top: 50px;
+    }
+
+    .inputLog input{
+        width: 89%;
+    }
+}

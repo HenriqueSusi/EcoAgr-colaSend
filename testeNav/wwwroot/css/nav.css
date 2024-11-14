@@ -1,0 +1,121 @@
+﻿:root {
+    --main-green: #0A5C36;
+    --medium-green: #0A5C48;
+    --beige: #FFF4D8;
+    --dark1: #18392B;
+    --dark2: #024035;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    height: 100vh;
+    background-color: var(--main-green);
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    color: white;
+    overflow-y: hidden;
+    font-size: 0.9em;
+}
+
+    #sidebar a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+
+.navitem {
+    margin-bottom: 25px;
+}
+
+#sidebar a:hover {
+    text-decoration: underline;
+}
+
+.btn-register a:hover {
+    text-decoration: none;
+}
+
+.line {
+    height: .01em;
+    background-color: #000;
+    width: 100%;
+}
+
+.pad {
+    margin: 10px 0;
+}
+
+.white {
+    background-color: #fff;
+}
+
+#nav {
+    margin-top: 20%;
+    margin-bottom: auto;
+    align-items: center;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-bottom: 15px;
+}
+
+.btn_style {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    width: 10em;
+    font-size: 0.9em;
+    border-radius: 50px;
+    font-family: Roboto;
+    justify-content: center;
+}
+
+    .btn_style:hover {
+        background-color: #fff;
+        color: var(--main-green);
+        cursor: pointer;
+    }
+
+
+#logo {
+    width: 5rem;
+}
+
+#logocontainer {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    justify-content: center;
+    margin-right: 10px;
+    margin: 5px 0;
+}
+
+.btn-register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50px;
+    text-decoration: none;
+    margin: 10px 0px 0px 0px;
+}
+
+    .btn-register:hover {
+        background-color: white;
+        color: #0a5c36 !important;
+        transition: all 0.4s ease;
+    }

@@ -1,0 +1,15 @@
+﻿@model Pedido
+
+<h2>Pedido Confirmado!</h2>
+
+<p>Obrigado por sua compra, @Model.UsuarioId!</p>
+<p>Data do Pedido: @Model.DataPedido</p>
+<p>Total: @Model.Total.ToString("C")</p>
+
+<h3>Itens do Pedido:</h3>
+<ul>
+    @foreach (var item in Model.Itens)
+    {
+        <li>@item.Produto.Nome - Quantidade: @item.Quantidade - Preço: @item.PrecoUnitario.ToString("C")</li>
+    }
+</ul>
