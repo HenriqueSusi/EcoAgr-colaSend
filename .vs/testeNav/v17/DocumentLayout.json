@@ -58,8 +58,7 @@
               "RelativeToolTip": "testeNav\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACYAAABZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T13:18:05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:18:05Z"
             },
             {
               "$type": "Document",
@@ -84,8 +83,7 @@
               "RelativeToolTip": "testeNav\\Views\\Carrinho\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T13:07:05.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:07:05.449Z"
             },
             {
               "$type": "Document",
@@ -97,8 +95,7 @@
               "RelativeToolTip": "testeNav\\Controllers\\CarrinhoController.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAAAowKUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:05:32.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:05:32.168Z"
             },
             {
               "$type": "Document",
@@ -110,8 +107,7 @@
               "RelativeToolTip": "testeNav\\Models\\ProdutoModel.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAAAQwA4AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:03:36.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T13:03:36.419Z"
             },
             {
               "$type": "Document",
@@ -123,8 +119,7 @@
               "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
               "ViewState": "AQIAAGcAAAAAAAAAAAAqwHIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:22:27.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T16:22:27.961Z"
             },
             {
               "$type": "Document",
@@ -136,8 +131,7 @@
               "RelativeToolTip": "testeNav\\Models\\ApplicationUser.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAA+wBIAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:23:14.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T16:23:14.356Z"
             }
           ]
         }
