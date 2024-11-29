@@ -1,0 +1,114 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using testeNav.Models
+@model testeNav.Models.ApplicationUser
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    Layout = "~/Views/Shared/_LayoutSemMenu.cshtml";
+}
+
+
+
+<head>
+    <link rel="stylesheet" href="~/css/homevend.css">
+    <link rel="stylesheet" href="~/css/CardProduto.css">
+    <link rel="stylesheet" href="~/css/site.css">
+
+</head>
+<div id="container1" style="background-color: var(--main-green); display:flex; flex-direction:row; align-items: center;">
+    <div id="logocontainer">
+        <img src="~/img/Logo.svg" alt="Logo" id="logo">
+        <p style="color:white;">EcoAgrícola</p>
+    </div>
+</div>
+
+<body>
+    <div id="Main" style="padding: 20px;">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                var user = await UserManager.GetUserAsync(User);
+                var fotoUser = "default.jpg";
+
+                if (await UserManager.IsInRoleAsync(user, "Vendedor"))
+                {
+                    if (!string.IsNullOrEmpty(user.foto))
+                    {
+                        fotoUser = user.foto;
+                    }
+
+                    <div style="margin-bottom: 30px">
+                        <div style="display: flex; align-items: center; justify-content: space-between">
+                            <p class=" hidden" style="text-align: start;">@user.UserName</p>
+                        
+                        <form style="display: flex; justify-content: space-around;" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                
+                            <button style="color: white; background-color: var(--main-green); width: 150px; padding: 10px 0px; border-radius: 50px; border: none;" class="logout">Sair</button>
+                        </form> 
+                            <a href="@Url.Action("EditarPerfil", "HomeVendedor")" style="background-color: var(--main-green); padding: 10px; width: 150px; text-align: center; height: 40px; font-size: 0.9em; color: white; border-radius: 60px;">
+                                Editar Perfil
+                            </a>
+                        </div>
+
+                        <div class="line pad hidden"></div>
+                        
+
+                        <div style="display: flex; align-items: center;">
+                            <!-- Botão para abrir o modal com detalhes -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <img src="~/img/@fotoUser" alt="Foto do Vendedor" class="rounded-circle" width="150" height="150" />
+                            </button>
+                            <div>
+                            <!-- Exibição dos detalhes na página -->
+
+                            <h5>@(!string.IsNullOrEmpty(user.NomeDaLoja) ? user.NomeDaLoja : "Loja não cadastrada")</h5>
+                            <p>@(!string.IsNullOrEmpty(user.Cidade) ? user.Cidade + ", " + user.Uf : "Localização não cadastrada")</p>
+                            <p><strong>Endereço:</strong> @(!string.IsNullOrEmpty(user.Endereco) ? user.Endereco : "Não informado")</p>
+
+                            @if (!string.IsNullOrEmpty(user.PhoneNumber))
+                            {
+                                <p>Telefone: @user.PhoneNumber</p>
+                            }
+                            else
+                            {
+                                <p>Telefone não disponível</p>
+                            }
+                        </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Modal para mostrar informações detalhadas -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Detalhes do Vendedor</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p><strong>Nome:</strong> @user.UserName</p>
+                                    <p><strong>Email:</strong> @user.Email</p>
+                                    <p><strong>Telefone:</strong> @(!string.IsNullOrEmpty(user.PhoneNumber) ? user.PhoneNumber : "Não disponível")</p>
+                                    <p><strong>Nome da Loja:</strong> @(!string.IsNullOrEmpty(user.NomeDaLoja) ? user.NomeDaLoja : "Não informado")</p>
+                                    <p><strong>Endereço:</strong> @(!string.IsNullOrEmpty(user.Endereco) ? user.Endereco : "Não informado")</p>
+                                    <p><strong>Cidade/UF:</strong> @(!string.IsNullOrEmpty(user.Cidade) ? user.Cidade + " - " + user.Uf : "Não informado")</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div
+                    
+                    <!-- Botão Editar -->
+
+                }
+            }
+            <a href="@Url.Action("Create", "Produtos")" style="background-color: var(--main-green); color: white; width: 200px; padding: 10px 50px; margin-top: 50px; border-radius: 5px; height: 50px">Adicionar Produto</a>
+
+
+    </div>
+
+</body>

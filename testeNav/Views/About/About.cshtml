@@ -1,66 +1,128 @@
 
+
 <head>
-    <link rel="stylesheet" href="~/css/carrousel.css">
     <link rel="stylesheet" href="~/css/site.css">
-    <link rel="stylesheet" href="~/css/responsiveHome.css">
+    <link rel="stylesheet" href="~/css/responsivo.css">
+    <link rel="stylesheet" href="~/css/carrousel.css">
+
+
 </head>
-<body>
- 
-    <div id="main">
-        <p class="first hidden">Sobre Nós</p>
-        <div class="line pad hidden"></div>
 
-        <div class="aboutinfo">
-            <div class="">
-                <h2>Nossa Missão</h2>
-                <p>Nós da EcoAgricola seguimos o pensamento sustentável e o utilizamos em nossas produções vocês já sabem, mas, quanto ao desafio de contribuir ao combate à fome mundial, adotamos uma política de venda onde cerca de 2% do nosso lucro anual é direcionado para Conab, ONG que atua em vários países da América Latina regendo leis de direitos alimentares da população.</p>
-            </div>
-            <div class="imgabout">
-                <img src="~/img/about1.png" alt=""> 
-            </div>
-
+    <div class="headerResponsive">
+        <div class="logo1">
+            <img src="~/img/Logo.svg" />
+            <p style="color: white">EcoAgrícola</p>
         </div>
-        <div class="aboutinfo">
+        <button style="background-color: transparent; border: none;" id="menuopen" onclick="menuOpen()">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
 
-            <div class="imgabout2">
-                <img src="~/img/about2.png" alt="">
+    <div id="sidebarResponsive">
+        <div id="nav">
+
+            <button id="menuclose" class="navitem" style="background-color: transparent; border: none;" onclick="menuclose()">
+                <i class="bi bi-x-lg"></i>
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index">Fechar</a>
+            </button>
+
+            <!-- Home -->
+            <div class="navitem">
+                <i class="fa-solid fa-house icon"></i>
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+            </div>
+            <!-- Produtos -->
+            <div class="navitem">
+                <i class="fa-solid fa-leaf icon"></i>
+                <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+            </div>
+            <!-- Agricultores -->
+            <div class="navitem">
+                <i class="fa-solid fa-user icon"></i>
+                <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
+            </div>
+            <!-- Mapa -->
+            <div class="navitem">
+                <i class="fa-solid fa-user icon"></i>
+                <a class="" asp-area="" asp-controller="Mapa" asp-action="Mapa">Mapa</a>
             </div>
 
-            <div class="">
-                <h2>Quem ajudamos?</h2>
-                <p>Nós da EcoAgricola seguimos o pensamento sustentável e o utilizamos em nossas produções vocês já sabem, mas, quanto ao desafio de contribuir ao combate à fome mundial, adotamos uma política de venda onde cerca de 2% do nosso lucro anual é direcionado para Conab, ONG que atua em vários países da América Latina regendo leis de direitos alimentares da população.</p>
+            <!-- Compras -->
+            <div class="navitem">
+                <i class="bi bi-basket-fill icon"></i>
+                <a class="" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+            </div>
+            <!-- Carrinho -->
+            <div class="navitem">
+                <i class="fa-solid fa-cart-shopping icon"></i>
+                <a class="" asp-area="" asp-controller="Carrinho" asp-action="Index">Carrinho</a>
+            </div>
+            <!-- Sobre -->
+            <div class="navitem">
+                <i class="bi bi-info-circle icon"></i>
+                <a class="" asp-area="" asp-controller="About" asp-action="about">Sobre</a>
             </div>
         </div>
-        <h2 style="text-align: center;
-                    margin-top: 10px;
-                    margin-bottom: 40px;">Criadores do Projeto</h2>
-        <div class="member-line">
-            <div class="member">
-                <a href="https://www.instagram.com/gih_souza_28?igsh=MXJuNmp1ZjAwaDVsYQ==" target="_blank"><img src="~/img/GiovannaSouzaMember.svg" alt=""></a>
-                <p>Giovanna de Souza</p>
-                <span>Designer e Líder</span>
-            </div>
-
-            <div class="member">
-                <a href="https://www.instagram.com/_henriquesusi?igsh=MTZ6ZnM0cTU3OTcwbg==" target="_blank"><img src="~/img/HenriqueSusiMember.png" alt=""></a>
-                <p>Henrique Susi</p>
-                <span>Desenvolvedor Back-end</span>
-            </div>
-
-            <div class="member">
-                <a href="https://www.instagram.com/anzolinjoaovictor?igsh=dG01eWF6a3Y2aHoz" target="_blank"><img src="~/img/JoãoVictorAnzolinMember.png" alt=""></a>
-                <p>João Victor Anzolin</p>
-                <span>Desenvolvedor Front-end</span>
-            </div>
-
-            <div class="member">
-                <a href="https://www.instagram.com/jo_sslva?igsh=ZHVzNGZ1eDJmZmRp" target="_blank"><img src="~/img/JoaquimSusiMember.png" alt=""></a>
-                <p>Joaquim Susi</p>
-                <span>Documentação e Design</span>
-            </div>
+        <div class="line white"></div>
+        <div id="bottom">
+            <partial name="_LoginPartial" />
         </div>
     </div>
-</body>
-<script src="https://kit.fontawesome.com/d566b63b60.js" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-</html>
+
+    <div id="main">
+    <p class="first hidden">Sobre Nós</p>
+    <div class="line pad hidden"></div>
+
+    <div class="aboutinfo">
+        <div class="info">
+            <h2>Nossa Missão</h2>
+            <p>Nós da EcoAgricola seguimos o pensamento sustentável e o utilizamos em nossas produções vocês já sabem, mas, quanto ao desafio de contribuir ao combate à fome mundial, adotamos uma política de venda onde cerca de 2% do nosso lucro anual é direcionado para Conab, ONG que atua em vários países da América Latina regendo leis de direitos alimentares da população.</p>
+        </div>
+        <div class="imgabout ">
+            <img class="imgsome" src="~/img/about1.png" alt="">
+        </div>
+
+    </div>
+    <div class="aboutinfo">
+
+        <div class="imgabout2 ">
+            <img class="imgsome" src="~/img/about2.png" alt="">
+        </div>
+
+        <div class="info">
+            <h2>Quem ajudamos?</h2>
+            <p>Nós da EcoAgricola seguimos o pensamento sustentável e o utilizamos em nossas produções vocês já sabem, mas, quanto ao desafio de contribuir ao combate à fome mundial, adotamos uma política de venda onde cerca de 2% do nosso lucro anual é direcionado para Conab, ONG que atua em vários países da América Latina regendo leis de direitos alimentares da população.</p>
+        </div>
+    </div>
+    <h2 style="text-align: center;
+                    margin-top: 10px;
+                    margin-bottom: 40px;">
+        Criadores do Projeto
+    </h2>
+    <div class="member-line">
+        <div class="member">
+            <a href="https://www.instagram.com/gih_souza_28?igsh=MXJuNmp1ZjAwaDVsYQ==" target="_blank"><img src="~/img/GiovannaSouzaMember.svg" alt=""></a>
+            <p>Giovanna de Souza</p>
+            <span>Designer e Líder</span>
+        </div>
+
+        <div class="member">
+            <a href="https://www.instagram.com/_henriquesusi?igsh=MTZ6ZnM0cTU3OTcwbg==" target="_blank"><img src="~/img/HenriqueSusiMember.png" alt=""></a>
+            <p>Henrique Susi</p>
+            <span>Desenvolvedor Back-end</span>
+        </div>
+
+        <div class="member">
+            <a href="https://www.instagram.com/anzolinjoaovictor?igsh=dG01eWF6a3Y2aHoz" target="_blank"><img src="~/img/JoãoVictorAnzolinMember.png" alt=""></a>
+            <p>João Victor Anzolin</p>
+            <span>Desenvolvedor Front-end</span>
+        </div>
+
+        <div class="member">
+            <a href="https://www.instagram.com/jo_sslva?igsh=ZHVzNGZ1eDJmZmRp" target="_blank"><img src="~/img/JoaquimSusiMember.png" alt=""></a>
+            <p>Joaquim Susi</p>
+            <span>Documentação e Design</span>
+        </div>
+    </div>
+</div>
+<script src="~/js/sobre.js"></script>

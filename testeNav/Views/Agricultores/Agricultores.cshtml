@@ -1,68 +1,121 @@
-<!DOCTYPE html>
-<head>
+@using Microsoft.AspNetCore.Identity
+@using testeNav.Models
 
-    <link rel="stylesheet" href="css/carrousel.css">
-    <link rel="stylesheet" href="css/basic.css">
-    <link rel="stylesheet" href="css/responsiveHome.css">
+@model IEnumerable<testeNav.Models.ApplicationUser>
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+<head>
+    <link rel="stylesheet" href="~/css/nav.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/responsivo.css" />
+
     <link rel="shortcut icon" href="img/Logo.svg" type="image/x-icon">
 </head>
-<body>
+
+@{
+    ViewData["Title"] = "Agricultores";
     
+    var vendedores = await UserManager.GetUsersInRoleAsync("Vendedor");
+}
 
+
+<div class="headerResponsive">
+    <div class="logo1">
+        <img src="~/img/Logo.svg" />
+        <p style="color: white">EcoAgrícola</p>
+    </div>
+    <button style="background-color: transparent; border: none;" id="menuopen" onclick="menuOpen()">
+        <i class="bi bi-list"></i>
+    </button>
+</div>
+
+<div id="sidebarResponsive">
+    <div id="nav">
+
+        <button id="menuclose" class="navitem" style="background-color: transparent; border: none;" onclick="menuclose()">
+            <i class="bi bi-x-lg"></i>
+            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Fechar</a>
+        </button>
+
+        <!-- Home -->
+        <div class="navitem">
+            <i class="fa-solid fa-house icon"></i>
+            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+        </div>
+        <!-- Produtos -->
+        <div class="navitem">
+            <i class="fa-solid fa-leaf icon"></i>
+            <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+        </div>
+        <!-- Agricultores -->
+        <div class="navitem">
+            <i class="fa-solid fa-user icon"></i>
+            <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
+        </div>
+        <!-- Mapa -->
+        <div class="navitem">
+            <i class="fa-solid fa-user icon"></i>
+            <a class="" asp-area="" asp-controller="Mapa" asp-action="Mapa">Mapa</a>
+        </div>
+
+        <!-- Compras -->
+        <div class="navitem">
+            <i class="bi bi-basket-fill icon"></i>
+            <a class="" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+        </div>
+        <!-- Carrinho -->
+        <div class="navitem">
+            <i class="fa-solid fa-cart-shopping icon"></i>
+            <a class="" asp-area="" asp-controller="Carrinho" asp-action="Index">Carrinho</a>
+        </div>
+        <!-- Sobre -->
+        <div class="navitem">
+            <i class="bi bi-info-circle icon"></i>
+            <a class="" asp-area="" asp-controller="About" asp-action="about">Sobre</a>
+        </div>
+    </div>
+    <div class="line white"></div>
+    <div id="bottom">
+        <partial name="_LoginPartial" />
+    </div>
+</div>
+
+<body>
     <div id="main">
-        <div id="SearchContainer">
-            <a href="#card_agricultor"><p>Agricultores</p></a>
-            <div id="box">
-                <i class="fa-solid fa-magnifying-glass iconsearch"></i>
-                <input type="text" name="Search" placeholder="Encontre o que precisa:" id="input_search">
+        <form>
+            <div id="SearchContainer">
+                <a href="#card_agricultor"><p>Agricultores</p></a>
+                <div id="box">
+                    <button asp-action="SearchProd" style="background-color: transparent; border: none; margin-right: 10px; margin-left: 10px; display: flex; justify-content: center; height: 100%; align-items: center;">
+                        <i class="fa-solid fa-magnifying-glass iconsearch"></i>
+                    </button>
+                    <input type="text" name="inNome" id="input_search" placeholder="Encontre o que precisa:">
+                </div>
             </div>
-        </div>
+        </form>
         <div class="line pad"></div>
-        <div id="card_agricultor">
-            <div class="card">
-                <a href="loja.html"><img src="img/agricultores/1.png" ></a>
-                <p>Orlando Saviero</p>
-            </div>
+        <div class="d-flex flex-wrap" style="flex-wrap: wrap; justify-content: space-between; margin-top: 30px;">
+            @if (vendedores != null && vendedores.Any())
+            {
+                @foreach (var vendedor in vendedores)
+                {
+                    var fotoUser = !string.IsNullOrEmpty(vendedor.foto) ? vendedor.foto : "default.jpg";
 
-            <div class="card">
-                <img src="img/agricultores/2.png" alt="">
-                <p>Renato Armandilho</p>
-            </div>
-
-            <div class="card">
-                <img src="img/agricultores/3.png" alt="">
-                <p>Ruvia Stravinski</p>
-            </div>
-
-            <div class="card">
-                <img src="img/agricultores/4.png" alt="">
-                <p>Rosa Mendes</p>
-            </div>
-
-            <div class="card">
-                <img src="img/agricultores/1.png" alt="">
-                <p>Orlando Saviero</p>
-            </div>
-
-            <div class="card">
-                <img src="img/agricultores/2.png" alt="">
-                <p>Renato Armandilho</p>
-            </div>
-
-            <div class="card">
-                <img src="img/agricultores/3.png" alt="">
-                <p>Ruvia Stravinski</p>
-            </div>
-
-            <div class="card">
-                <img src="img/agricultores/4.png" alt="">
-                <p>Rosa Mendes</p>
-            </div>
-
+                    <div class="text-center mx-3" style="width: 120px; ">
+                        <img src="~/img/@fotoUser" alt="@vendedor.UserName" class="rounded-circle" width="120" height="120" style="cursor: pointer;" />
+                        <p>@vendedor.UserName</p>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-center">Nenhum agricultor encontrado.</p>
+            }
         </div>
-
     </div>
 </body>
-<script src="https://kit.fontawesome.com/d566b63b60.js" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
-</html>
+
+<script src="~/js/agricultor.js"></script>

@@ -16,14 +16,14 @@ namespace testeNav.Controllers
             _context = context;
         }
 
-        // Exibe o carrinho
+        
         public IActionResult Index()
         {
             var carrinho = ObterCarrinho();
             return View(carrinho);
         }
 
-        // Adiciona item ao carrinho
+       
         public IActionResult AdicionarAoCarrinho(int Id)
         {
             var produto = _context.Produtos.Find(Id);
@@ -69,7 +69,7 @@ namespace testeNav.Controllers
             return Json(new { success = true });
         }
 
-        // Remove item do carrinho
+        
         public IActionResult RemoverDoCarrinho(int produtoId)
         {
             var carrinho = ObterCarrinho();
@@ -84,7 +84,7 @@ namespace testeNav.Controllers
             return RedirectToAction("Index");
         }
 
-        // Métodos auxiliares para o carrinho na sessão
+        
         private CarrinhoModel ObterCarrinho()
         {
             var carrinho = HttpContext.Session.GetObjectFromJson<CarrinhoModel>("Carrinho") ?? new CarrinhoModel();
@@ -96,69 +96,93 @@ namespace testeNav.Controllers
             HttpContext.Session.SetObjectAsJson("Carrinho", carrinho);
         }
 
-        public IActionResult Checkout()
+        public IActionResult Pagamento()
         {
-            var carrinho = ObterCarrinho(); // Obtenha o carrinho da sessão
+            var carrinho = ObterCarrinho(); 
+
             if (carrinho.Itens.Count == 0)
             {
                 ModelState.AddModelError("", "O carrinho está vazio.");
                 return RedirectToAction("Index");
             }
 
+            return View(carrinho); 
+        }
+
+        [HttpPost]
+        public IActionResult ConcluirPagamento(string metodoPagamento)
+        {
+            var carrinho = ObterCarrinho();  
+
+            if (carrinho == null || !carrinho.Itens.Any())
+            {
+                ModelState.AddModelError("", "O carrinho está vazio.");
+                return RedirectToAction("Index");
+            }
+
+           
+            if (string.IsNullOrEmpty(metodoPagamento))
+            {
+                ModelState.AddModelError("", "Selecione um método de pagamento.");
+                return RedirectToAction("Pagamento");
+            }
+
+          
+            switch (metodoPagamento)
+            {
+                case "CartaoCredito":
+                   
+                    TempData["Mensagem"] = "Pagamento com cartão de crédito processado com sucesso!";
+                    break;
+                case "Pix":
+                    
+                    TempData["Mensagem"] = "QR Code Pix gerado com sucesso!";
+                    break;
+                case "Boleto":
+                    
+                    TempData["Mensagem"] = "Boleto gerado com sucesso!";
+                    break;
+                default:
+                    ModelState.AddModelError("", "Método de pagamento inválido.");
+                    return RedirectToAction("Pagamento");
+            }
+
+
             var pedido = new Pedido
             {
                 UsuarioId = User.Identity.Name,
                 DataPedido = DateTime.Now,
                 Total = carrinho.Itens.Sum(item => item.Produto.Preco * item.Quantidade),
-                Itens = new List<ItemPedido>()
+                Itens = carrinho.Itens.Select(item => new ItemPedido
+                {
+                    ProdutoId = item.Produto.Id,  
+                    Quantidade = item.Quantidade,
+                    PrecoUnitario = item.Produto.Preco
+                }).ToList()
             };
 
-            foreach (var itemCarrinho in carrinho.Itens)
-            {
-                var produto = _context.Produtos.FirstOrDefault(p => p.Id == itemCarrinho.ProdutoId);
 
-                // Verifica se o produto existe e se há estoque suficiente
-                if (produto == null || produto.Quantidade < itemCarrinho.Quantidade)
-                {
-                    TempData["Erro"] = $"Estoque insuficiente para o produto: {itemCarrinho.Produto.Nome}";
-                    return RedirectToAction("Index");
-                }
-
-                // Subtrai a quantidade do estoque do produto
-                produto.Quantidade -= itemCarrinho.Quantidade;
-
-                // Adiciona o item ao pedido
-                var itemPedido = new ItemPedido
-                {
-                    ProdutoId = itemCarrinho.ProdutoId,
-                    Produto = itemCarrinho.Produto,
-                    Quantidade = itemCarrinho.Quantidade,
-                    PrecoUnitario = itemCarrinho.Produto.Preco
-                };
-                pedido.Itens.Add(itemPedido);
-            }
-
-            // Salva o pedido e atualiza o estoque
             _context.Pedidos.Add(pedido);
             _context.SaveChanges();
 
-            // Limpa o carrinho da sessão após o checkout
+            
             HttpContext.Session.Remove("Carrinho");
 
-            return RedirectToAction("Confirmacao");
+            
+            return RedirectToAction("Index", "Compras");
         }
 
         public async Task<IActionResult> Compras()
         {
-            var usuarioId = User.Identity.Name; // Obtém o ID do usuário logado
+            var usuarioId = User.Identity.Name; 
             var comprasUsuario = await _context.Pedidos
-                .Include(p => p.Itens) // Inclui os itens do pedido
-                .ThenInclude(i => i.Produto) // Inclui os detalhes do produto
-                .Where(p => p.UsuarioId == usuarioId) // Filtra os pedidos pelo usuário logado
-                .OrderByDescending(p => p.DataPedido) // Ordena por data (opcional)
+                .Include(p => p.Itens) 
+                .ThenInclude(i => i.Produto) 
+                .Where(p => p.UsuarioId == usuarioId) 
+                .OrderByDescending(p => p.DataPedido) 
                 .ToListAsync();
 
-            return RedirectToAction("Compras");
+            return RedirectToAction("Index", "Compras");
 
         }
     }

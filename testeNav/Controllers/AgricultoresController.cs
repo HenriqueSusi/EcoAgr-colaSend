@@ -1,10 +1,16 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using testeNav.Data;
+using testeNav.Models;
+
 
 namespace testeNav.Controllers
 {
     public class AgricultoresController : Controller
     {
+
         // GET: AgricultoresController
         public IActionResult Agricultores()
         {
@@ -16,6 +22,36 @@ namespace testeNav.Controllers
         {
             return View();
         }
+
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationDbContext _context;
+
+        public AgricultoresController(UserManager<ApplicationUser> userManager, ApplicationDbContext context)
+        {
+            _userManager = userManager;
+            _context = context;
+        }
+
+
+        public async Task<IActionResult> SearchProd(string inNome)
+        {
+            // Inicia a query com todos os produtos
+            var query = _context.Users.AsQueryable();
+
+            // Aplica o filtro caso um nome seja fornecido
+            if (!string.IsNullOrEmpty(inNome))
+            {
+                inNome = inNome.Trim().ToUpper();
+                query = query.Where(i => i.UserName.ToUpper().Contains(inNome));
+            }
+
+            // Executa a consulta no banco de dados
+            var agricultores = await query.ToListAsync();
+
+            // Retorna a view "Index" com os produtos filtrados
+            return View("Agricultores", agricultores);
+        }
+
 
         // GET: AgricultoresController/Create
         public ActionResult Create()

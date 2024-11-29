@@ -116,6 +116,5 @@
 }
 
 .btn-modals:hover {
-    background-color: transparent;
-    color: black;
+    color: var(--main-green);
 }

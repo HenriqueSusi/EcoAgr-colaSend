@@ -5,25 +5,25 @@ namespace testeNav.Controllers
 {
     public class MapaController : Controller
     {
-        // GET: MapaController
+        
         public IActionResult Mapa()
         {
             return View();
         }
 
-        // GET: MapaController/Details/5
+        
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: MapaController/Create
+        
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: MapaController/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
@@ -38,13 +38,13 @@ namespace testeNav.Controllers
             }
         }
 
-        // GET: MapaController/Edit/5
+        
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: MapaController/Edit/5
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, IFormCollection collection)

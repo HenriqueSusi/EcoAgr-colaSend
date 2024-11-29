@@ -5,45 +5,63 @@
     ViewData["Title"] = "Log in";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div class="row">
-    <div class="col-md-4">
-        <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                    <label asp-for="Input.Email" class="form-label">Email</label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-floating mb-3">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
-                    <label asp-for="Input.Password" class="form-label">Password</label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="checkbox mb-3">
-                    <label asp-for="Input.RememberMe" class="form-label">
-                        <input class="form-check-input" asp-for="Input.RememberMe" />
-                        @Html.DisplayNameFor(m => m.Input.RememberMe)
-                    </label>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                   
-                </div>
-            </form>
-        </section>
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/register.css" />
+</head>
+
+
+<div id="Main" >
+    <div style="display: flex; margin-top: 2%; margin:2% 5%; border: 1px solid var(--main-green); border-radius: 20px; max-width: 90%;" >
+        <div class="loginImg">
+            <img src="~/img/Login/logCliente.png" style="width: 80%"/>
+        </div>
+
+        <div class="login" style="width: 30%;">
+            <section>
+                <form id="account" method="post">
+                    <h3>Login</h3>
+                    <hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                    <div class="formInput" id="cpf" style="display: flex; flex-direction: column; ">
+                        <label asp-for="Input.Email">Email*</label>
+                        <input asp-for="Input.Email" autocomplete="username" style="width: 100%" aria-required="true" class="inputLogin" placeholder="nome@domínio.com" />
+
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+
+                    <div class="formInput" id="cpf" style="display: flex; flex-direction: column; ">
+                        <label asp-for="Input.Password">Senha*</label>
+                        <input asp-for="Input.Password" autocomplete="username" style="width: 100%" aria-required="true" class="inputLogin" placeholder="*********" />
+
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
+
+
+                    <div class="checkbox mb-3">
+                        <label asp-for="Input.RememberMe" class="form-label">
+                            <input class="form-check-input" asp-for="Input.RememberMe" />
+                            @Html.DisplayNameFor(m => m.Input.RememberMe)
+                        </label>
+                    </div>
+                    <div>
+                        <button id="login-submit" type="submit" class="">Login</button>
+                    </div>
+                    <div>
+                        <p>
+                            <a style="color: var(--main-green); text-decoration: underline;" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Ainda não tem uma conta? Cadastre-se</a>
+                        </p>
+
+                    </div>
+                </form>
+            </section>
+        </div>
+
     </div>
+
 
 
 @section Scripts {

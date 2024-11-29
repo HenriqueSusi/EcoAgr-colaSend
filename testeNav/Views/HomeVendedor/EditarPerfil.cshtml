@@ -1,0 +1,55 @@
+﻿@model testeNav.Models.ApplicationUser
+
+@{
+    Layout = "~/Views/Shared/_LayoutSemMenu.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/register.css" />
+
+</head>
+
+<div style="display: flex; justify-content: center;">
+
+    <form asp-action="EditarPerfil" asp-controller="HomeVendedor" method="post" enctype="multipart/form-data">
+
+        <div class="text-center mb-3">
+            <img src="~/img/@(Model.foto ?? "default.jpg")" alt="Foto do Usuário" class="rounded-circle" width="150" height="150" />
+        </div>
+
+        <div class="formInput" style="display: flex">
+            <label for="foto">Alterar Foto:</label>
+            <input type="file" name="foto" />
+        </div>
+
+        <div class="formInput" style="display: flex">
+            <label for="NomeDaLoja">Nome da Loja:</label>
+            <input type="text" class="inputLogin" name="NomeDaLoja" value="@Model.NomeDaLoja">
+        </div>
+
+        <div class="formInput" style="display: flex">
+            <label for="Endereco">Endereço:</label>
+            <input type="text" class="inputLogin" name="Endereco" value="@Model.Endereco">
+        </div>
+
+        <div class="formInput" style="display: flex">
+            <label for="Cidade">Cidade:</label>
+            <input type="text" class="inputLogin" name="Cidade" value="@Model.Cidade">
+        </div>
+
+        <div class="formInput" style="display: flex">
+            <label for="Uf">UF:</label>
+            <input type="text" class="inputLogin" name="Uf" value="@Model.Uf">
+        </div>
+
+        <div class="formInput" style="display: flex">
+            <label for="PhoneNumber">Telefone:</label>
+            <input type="text" class="inputLogin" name="PhoneNumber" value="@Model.PhoneNumber">
+        </div>
+
+        <button type="submit" style="background-color: var(--main-green); color: white; width: 200px; border-radius: 5px; height: 40px" >Salvar Alterações</button>
+
+    </form>
+
+</div>

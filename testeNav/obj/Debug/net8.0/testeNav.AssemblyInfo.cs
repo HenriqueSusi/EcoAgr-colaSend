@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("testeNav")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e19269c99687aa1643bd46f934727c8ecbbc3193")]
 [assembly: System.Reflection.AssemblyProductAttribute("testeNav")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testeNav")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -43,6 +43,9 @@
     color: black;
 }
 
+.headerResponsive{
+    display: none;
+}
 body {
     display: flex;
     height: 100vh;
@@ -55,6 +58,10 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     width: 100%;
+}
+
+#sidebarResponsive{
+    display: none;
 }
 
 .line {
@@ -117,10 +124,17 @@ body {
         overflow-x: hidden;
     }
 
+    #box button{
+        height: 100%;
+        display: flex;
+    }
+
 .iconsearch {
     padding: 0px 10px;
     font-size: 0.7em;
     overflow-x: clip;
+    margin-right: 10px;
+    margin-left: 10px
 }
 
 #card_agricultor {
@@ -284,3 +298,17 @@ body {
     .map_search svg {
         font-size: medium;
     }
+
+.cardProduto {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border: 0.5px solid black;
+    align-items: center;
+    border-radius: 20px;
+    height: 420px;
+    margin: 20px;
+    align-items: start;
+    padding-left: 20px;
+    padding-right: 20px;
+}

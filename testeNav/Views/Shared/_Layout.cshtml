@@ -1,13 +1,14 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - testeNav</title>
+    <title>EcoAgrícola | @ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/nav.css" />
+    <link rel="stylesheet" href="~/css/responsivo.css" />
     <link rel="stylesheet" href="~/testeNav.styles.css" asp-append-version="true" />
-    
+
 </head>
 <body>
     <header>
@@ -32,11 +33,16 @@
                     <i class="fa-solid fa-user icon"></i>
                     <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
                 </div>
+                <!-- Mapa -->
+                <div class="navitem">
+                    <i class="bi bi-geo-alt-fill icon"></i>
+                    <a class="" asp-area="" asp-controller="Mapa" asp-action="Mapa">Mapa</a>
+                </div>
 
                 <!-- Compras -->
                 <div class="navitem">
                     <i class="bi bi-basket-fill icon"></i>
-                    <a class="" asp-area="" asp-controller="Carrinho" asp-action="Compras">Compras</a>
+                    <a class="" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
                 </div>
                 <!-- Carrinho -->
                 <div class="navitem">

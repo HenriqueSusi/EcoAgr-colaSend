@@ -74,13 +74,15 @@ namespace testeNav.Areas.Identity.Pages.Account
 
             returnUrl ??= Url.Content("~/");
 
-            // Clear the existing external cookie to ensure a clean login process
+            
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
 
             ReturnUrl = returnUrl;
         }
+
+
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
@@ -90,13 +92,28 @@ namespace testeNav.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
+                
                 var user = await _userManager.FindByEmailAsync(Input.Email);
-                var nome = user != null ? user.UserName : "nenhum";
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    return Page();
+                }
 
-                var result = await _signInManager.PasswordSignInAsync(nome, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                
+                var result = await _signInManager.PasswordSignInAsync(user.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+
+                    
+                    if (await _userManager.IsInRoleAsync(user, "Vendedor"))
+                    {
+                        
+                        return RedirectToAction("Index", "HomeVendedor");
+                    }
+
+                    
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
@@ -115,7 +132,7 @@ namespace testeNav.Areas.Identity.Pages.Account
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            
             return Page();
         }
     }

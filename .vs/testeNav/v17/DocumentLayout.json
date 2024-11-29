@@ -3,32 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\carrinho\\compras.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\carrinho\\compras.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\homevendedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\homevendedor\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\produtos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\produtos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\controllers\\carrinhocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\views\\carrinho\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\carrinho\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\models\\produtomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\models\\produtomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\senai3em\\desktop\\backendecoagricola-master\\backendecoagricola-master\\testenav\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,88 +50,94 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AQIAAGsAAAAAAAAAAAAawHgAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T12:36:06.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\HomeVendedor\\Index.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Views\\HomeVendedor\\Index.cshtml",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\HomeVendedor\\Index.cshtml",
+              "RelativeToolTip": "testeNav\\Views\\HomeVendedor\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAC4AAACPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:59:20.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "testeNav\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "testeNav\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACYAAABZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T13:18:05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Compras.cshtml",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Carrinho\\Compras.cshtml",
-              "RelativeDocumentMoniker": "testeNav\\Views\\Carrinho\\Compras.cshtml",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Carrinho\\Compras.cshtml",
-              "RelativeToolTip": "testeNav\\Views\\Carrinho\\Compras.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T13:17:01.381Z",
+              "WhenOpened": "2024-11-29T11:58:33.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Carrinho\\Index.cshtml",
-              "RelativeDocumentMoniker": "testeNav\\Views\\Carrinho\\Index.cshtml",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Carrinho\\Index.cshtml",
-              "RelativeToolTip": "testeNav\\Views\\Carrinho\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAWAAAA",
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "testeNav\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAC0AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-08T13:07:05.449Z"
+              "WhenOpened": "2024-11-29T11:58:16.193Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Produtos\\Index.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Views\\Produtos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Produtos\\Index.cshtml",
+              "RelativeToolTip": "testeNav\\Views\\Produtos\\Index.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAGAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:55:05.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Produtos\\Create.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Views\\Produtos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Views\\Produtos\\Create.cshtml",
+              "RelativeToolTip": "testeNav\\Views\\Produtos\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-29T11:19:15.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CarrinhoController.cs",
               "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Controllers\\CarrinhoController.cs",
               "RelativeDocumentMoniker": "testeNav\\Controllers\\CarrinhoController.cs",
               "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Controllers\\CarrinhoController.cs",
               "RelativeToolTip": "testeNav\\Controllers\\CarrinhoController.cs",
-              "ViewState": "AQIAAF8AAAAAAAAAAAAowKUAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:05:32.168Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProdutoModel.cs",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Models\\ProdutoModel.cs",
-              "RelativeDocumentMoniker": "testeNav\\Models\\ProdutoModel.cs",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Models\\ProdutoModel.cs",
-              "RelativeToolTip": "testeNav\\Models\\ProdutoModel.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwA4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T13:03:36.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "testeNav\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AQIAAGcAAAAAAAAAAAAqwHIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:22:27.961Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "testeNav\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "testeNav\\Models\\ApplicationUser.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA+wBIAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T16:23:14.356Z"
+              "WhenOpened": "2024-11-29T11:18:39.787Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,15 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using testeNav.Models;
 
 namespace testeNav.Controllers
 {
     public class ComprasController : Controller
     {
 
-        public ActionResult Compras()
+        public ActionResult Index()
         {
-            return View();
-        }
+            var pedidos = new List<Pedido>();
 
+            
+            return View(pedidos);
+        }
 
         public ActionResult Details(int id)
         {

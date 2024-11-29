@@ -49,6 +49,10 @@
       "PackagePath": "staticwebassets\\css\\register.css"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\css\\responsivo.css",
+      "PackagePath": "staticwebassets\\css\\responsivo.css"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -61,8 +65,16 @@
       "PackagePath": "staticwebassets\\img\\015bc224-c961-4d76-9300-6165961400e4_WIN_20240816_11_40_42_Pro.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\0c945942-7aeb-475c-9e87-3b23097e405a_WIN_20240802_08_02_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\0c945942-7aeb-475c-9e87-3b23097e405a_WIN_20240802_08_02_53_Pro.jpg"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\0d0ff317-93d0-4d27-b35a-cca2d3e498f1_Captura de tela 2024-08-15 103907.png",
       "PackagePath": "staticwebassets\\img\\0d0ff317-93d0-4d27-b35a-cca2d3e498f1_Captura de tela 2024-08-15 103907.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\1.png",
+      "PackagePath": "staticwebassets\\img\\1.png"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\14d28912-b009-451c-93cb-6bd1b0605832_WIN_20240816_11_40_42_Pro.jpg",
@@ -77,12 +89,36 @@
       "PackagePath": "staticwebassets\\img\\1d4ffd62-fc37-4d94-a8b7-d3182ad5fb8e_WIN_20240816_11_42_34_Pro.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\2283871f-36fa-48fa-8888-6603a479e53e_WIN_20240816_11_42_34_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\2283871f-36fa-48fa-8888-6603a479e53e_WIN_20240816_11_42_34_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\3ed723fb-7e80-458d-85ce-1d78d73aab09_Captura de tela 2024-02-08 151630.png",
+      "PackagePath": "staticwebassets\\img\\3ed723fb-7e80-458d-85ce-1d78d73aab09_Captura de tela 2024-02-08 151630.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\441fc809-574e-45f4-8860-af31c5641ed9_double.png",
+      "PackagePath": "staticwebassets\\img\\441fc809-574e-45f4-8860-af31c5641ed9_double.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\477981fa-c360-485a-a511-49df93d49b4e_WIN_20240816_11_40_42_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\477981fa-c360-485a-a511-49df93d49b4e_WIN_20240816_11_40_42_Pro.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\4f3d9d91-d2a5-4a68-9fcb-aa783fc48e0f_WIN_20240802_08_02_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\4f3d9d91-d2a5-4a68-9fcb-aa783fc48e0f_WIN_20240802_08_02_53_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\51ad6f53-4d6b-40a8-85c2-5bee0d808079_WIN_20240229_14_08_52_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\51ad6f53-4d6b-40a8-85c2-5bee0d808079_WIN_20240229_14_08_52_Pro.jpg"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\532ade77-4db5-498f-bec2-18e694a94b3d_WIN_20240816_11_42_34_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\532ade77-4db5-498f-bec2-18e694a94b3d_WIN_20240816_11_42_34_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\57c31aca-073e-4376-b154-65593688e273_4.png",
+      "PackagePath": "staticwebassets\\img\\57c31aca-073e-4376-b154-65593688e273_4.png"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\592c184c-8fbc-4f87-b80a-ce39a1a7d1f8_Captura de tela 2024-08-15 103907.png",
@@ -101,8 +137,32 @@
       "PackagePath": "staticwebassets\\img\\62b8e0d4-5202-4c26-8cd1-2fc5c4dd3dcc_WIN_20240816_11_40_42_Pro.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\6fb628e8-7329-432b-8fa7-21a54fc1f8b7_Captura de tela 2024-08-15 103907.png",
+      "PackagePath": "staticwebassets\\img\\6fb628e8-7329-432b-8fa7-21a54fc1f8b7_Captura de tela 2024-08-15 103907.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\7142111d-60cd-4d7a-ad4f-bdb3b6c292f2_WIN_20241128_13_37_04_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\7142111d-60cd-4d7a-ad4f-bdb3b6c292f2_WIN_20241128_13_37_04_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\7fb48bbb-8572-459a-b84c-62dd02a80867_8.png",
+      "PackagePath": "staticwebassets\\img\\7fb48bbb-8572-459a-b84c-62dd02a80867_8.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\828d5947-bfa5-4d62-8935-782ac500be71_WIN_20241128_13_37_04_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\828d5947-bfa5-4d62-8935-782ac500be71_WIN_20241128_13_37_04_Pro.jpg"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\84afef89-5078-43cb-9029-d6618331a1b1_Captura de tela 2024-08-15 103907.png",
       "PackagePath": "staticwebassets\\img\\84afef89-5078-43cb-9029-d6618331a1b1_Captura de tela 2024-08-15 103907.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\9549eb3b-fa74-4eac-b603-a9b290f9c5e3_Captura de tela 2024-08-25 134002.png",
+      "PackagePath": "staticwebassets\\img\\9549eb3b-fa74-4eac-b603-a9b290f9c5e3_Captura de tela 2024-08-25 134002.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\97dc99f2-4f5b-40b4-a006-efe7472d97bd_WIN_20240816_11_40_42_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\97dc99f2-4f5b-40b4-a006-efe7472d97bd_WIN_20240816_11_40_42_Pro.jpg"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\994cfaf5-a7a2-4ed9-9f0a-0401b674deec_Captura de tela 2024-08-15 103907.png",
@@ -111,6 +171,26 @@
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\9f5c1930-4d5d-40a6-aa22-cef77f574164_WIN_20240816_11_40_42_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\9f5c1930-4d5d-40a6-aa22-cef77f574164_WIN_20240816_11_40_42_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\Boleto Bancario - Padrao Banco do Brasil 2.png",
+      "PackagePath": "staticwebassets\\img\\Boleto Bancario - Padrao Banco do Brasil 2.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\CAPA HOUSE Johnny e Jotta (og).jpg",
+      "PackagePath": "staticwebassets\\img\\CAPA HOUSE Johnny e Jotta (og).jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\Captura de tela 2024-02-02 131218.png",
+      "PackagePath": "staticwebassets\\img\\Captura de tela 2024-02-02 131218.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\Captura de tela 2024-09-27 085547.png",
+      "PackagePath": "staticwebassets\\img\\Captura de tela 2024-09-27 085547.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\Captura de tela 2024-10-25 075745.png",
+      "PackagePath": "staticwebassets\\img\\Captura de tela 2024-10-25 075745.png"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\GiovannaSouzaMember.svg",
@@ -149,8 +229,24 @@
       "PackagePath": "staticwebassets\\img\\Logo.svg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\QRCODE.webp",
+      "PackagePath": "staticwebassets\\img\\QRCODE.webp"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\a00430aa-d68f-4e52-87f3-0798ec3921ea_Captura de tela 2024-08-27 215250.png",
+      "PackagePath": "staticwebassets\\img\\a00430aa-d68f-4e52-87f3-0798ec3921ea_Captura de tela 2024-08-27 215250.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\a36a0112-606a-4d6a-b33d-8261f90f4e9a_Captura de tela 2024-08-15 103907.png",
       "PackagePath": "staticwebassets\\img\\a36a0112-606a-4d6a-b33d-8261f90f4e9a_Captura de tela 2024-08-15 103907.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\a585df90-4477-4b8b-936d-e76c0005d962_WIN_20241128_13_36_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\a585df90-4477-4b8b-936d-e76c0005d962_WIN_20241128_13_36_53_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\aa0355d5-099b-496f-a5c8-a671f3f70d96_logo.png",
+      "PackagePath": "staticwebassets\\img\\aa0355d5-099b-496f-a5c8-a671f3f70d96_logo.png"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\aad34a76-011c-4e88-98a6-44123604d1e2_default.jpg",
@@ -185,8 +281,28 @@
       "PackagePath": "staticwebassets\\img\\agricultores\\5.png"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\antiheroi.jpeg",
+      "PackagePath": "staticwebassets\\img\\antiheroi.jpeg"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\b01241b7-5528-43d4-87c0-13839c2c195a_WIN_20240816_11_42_34_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\b01241b7-5528-43d4-87c0-13839c2c195a_WIN_20240816_11_42_34_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\b08cf9df-2040-4be9-bb12-0633a42d2ee3_WIN_20240802_08_02_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\b08cf9df-2040-4be9-bb12-0633a42d2ee3_WIN_20240802_08_02_53_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\b0e24a43-015f-412d-a680-23d43d3bfa78_Captura de tela 2024-10-24 132907.png",
+      "PackagePath": "staticwebassets\\img\\b0e24a43-015f-412d-a680-23d43d3bfa78_Captura de tela 2024-10-24 132907.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\b59e151e-ed98-4aa9-9988-f717cd0cbcc1_WIN_20241128_13_37_04_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\b59e151e-ed98-4aa9-9988-f717cd0cbcc1_WIN_20241128_13_37_04_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\bacad842-ef41-4031-8eae-05c2dfbf8057_3.png",
+      "PackagePath": "staticwebassets\\img\\bacad842-ef41-4031-8eae-05c2dfbf8057_3.png"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\banner\\1.png",
@@ -205,24 +321,88 @@
       "PackagePath": "staticwebassets\\img\\be3ff28d-0715-4344-9e1c-7dd69e313631_WIN_20240816_11_42_34_Pro.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\c4491d62-2b10-4f7a-a40e-f96bb26335b1_8.png",
+      "PackagePath": "staticwebassets\\img\\c4491d62-2b10-4f7a-a40e-f96bb26335b1_8.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\c6ef4ae3-636e-461f-905b-413423cdd46d_1.png",
+      "PackagePath": "staticwebassets\\img\\c6ef4ae3-636e-461f-905b-413423cdd46d_1.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\c7be6b6c-fbf5-4468-b4b2-8ec3ebc44475_3.png",
+      "PackagePath": "staticwebassets\\img\\c7be6b6c-fbf5-4468-b4b2-8ec3ebc44475_3.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\ce7c5588-2db5-4db3-b73e-5f7b5cd16c9d_Captura de tela 2024-08-25 134002.png",
+      "PackagePath": "staticwebassets\\img\\ce7c5588-2db5-4db3-b73e-5f7b5cd16c9d_Captura de tela 2024-08-25 134002.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\cenoura.png",
       "PackagePath": "staticwebassets\\img\\cenoura.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\cfb98191-048d-4b2a-924c-891ca4ce679a_WIN_20241128_13_36_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\cfb98191-048d-4b2a-924c-891ca4ce679a_WIN_20241128_13_36_53_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\cfbb5b5e-c6f7-4545-9a4c-0bfc9068fca2_Capa EU SEI.jpeg",
+      "PackagePath": "staticwebassets\\img\\cfbb5b5e-c6f7-4545-9a4c-0bfc9068fca2_Capa EU SEI.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\d1ff12a5-f8c2-4afe-aab3-8109475079a7_WIN_20240229_14_08_52_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\d1ff12a5-f8c2-4afe-aab3-8109475079a7_WIN_20240229_14_08_52_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\d2d0cc96-a770-4f90-9931-4cf562413c03_CAPA HOUSE Johnny e Jotta (og).jpg",
+      "PackagePath": "staticwebassets\\img\\d2d0cc96-a770-4f90-9931-4cf562413c03_CAPA HOUSE Johnny e Jotta (og).jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\d5ce2afd-38c4-4d16-a44c-627d94c4215c_2.png",
+      "PackagePath": "staticwebassets\\img\\d5ce2afd-38c4-4d16-a44c-627d94c4215c_2.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\d94061e0-f338-4285-a328-6cc0c92178b3_WIN_20241128_13_36_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\d94061e0-f338-4285-a328-6cc0c92178b3_WIN_20241128_13_36_53_Pro.jpg"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\default.jpg",
       "PackagePath": "staticwebassets\\img\\default.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\e8036be5-c6c7-4b22-be69-a0516e8b2a88_SOL CAPA 1 -praia.jpg",
+      "PackagePath": "staticwebassets\\img\\e8036be5-c6c7-4b22-be69-a0516e8b2a88_SOL CAPA 1 -praia.jpg"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\e859f6ee-dbcf-498c-9e08-41e1a22ea4fc_WIN_20240816_11_42_34_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\e859f6ee-dbcf-498c-9e08-41e1a22ea4fc_WIN_20240816_11_42_34_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\e98dee69-ed76-4280-a0fa-5dc2e7461a06_logo.png",
+      "PackagePath": "staticwebassets\\img\\e98dee69-ed76-4280-a0fa-5dc2e7461a06_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\e9de22f0-9edf-4546-aa4b-ced50c48bc75_WIN_20241128_13_37_04_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\e9de22f0-9edf-4546-aa4b-ced50c48bc75_WIN_20241128_13_37_04_Pro.jpg"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\f49848b5-ae7b-4ac7-b54f-1facbd26a6b0_WIN_20240816_11_40_42_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\f49848b5-ae7b-4ac7-b54f-1facbd26a6b0_WIN_20240816_11_40_42_Pro.jpg"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\f572646b-b5e4-4a2c-a9b6-5edbab6177be_double cover.png",
+      "PackagePath": "staticwebassets\\img\\f572646b-b5e4-4a2c-a9b6-5edbab6177be_double cover.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\fab5906e-441a-44d4-ac9b-4c3142b670e9_Captura de tela 2024-11-22 130639.png",
+      "PackagePath": "staticwebassets\\img\\fab5906e-441a-44d4-ac9b-4c3142b670e9_Captura de tela 2024-11-22 130639.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\fb07ce86-88d8-4915-a9bf-600ec51af733_WIN_20240816_11_40_42_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\fb07ce86-88d8-4915-a9bf-600ec51af733_WIN_20240816_11_40_42_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\iisstart.htm",
+      "PackagePath": "staticwebassets\\img\\iisstart.htm"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\1.png",
@@ -245,6 +425,10 @@
       "PackagePath": "staticwebassets\\img\\produtos\\5.png"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\7.png",
+      "PackagePath": "staticwebassets\\img\\produtos\\7.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\8.png",
       "PackagePath": "staticwebassets\\img\\produtos\\8.png"
     },
@@ -265,16 +449,40 @@
       "PackagePath": "staticwebassets\\img\\produtos\\Captura de tela 2024-08-15 100109.png"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\Captura de tela 2024-08-15 103907.png",
+      "PackagePath": "staticwebassets\\img\\produtos\\Captura de tela 2024-08-15 103907.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\Captura de tela 2024-08-24 224116.png",
+      "PackagePath": "staticwebassets\\img\\produtos\\Captura de tela 2024-08-24 224116.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\Captura de tela 2024-08-29 130939.png",
       "PackagePath": "staticwebassets\\img\\produtos\\Captura de tela 2024-08-29 130939.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\Captura de tela 2024-10-10 080504.png",
+      "PackagePath": "staticwebassets\\img\\produtos\\Captura de tela 2024-10-10 080504.png"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\EditarProduto.png",
       "PackagePath": "staticwebassets\\img\\produtos\\EditarProduto.png"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\IMC.png",
+      "PackagePath": "staticwebassets\\img\\produtos\\IMC.png"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\JoãoVictorAnzolinMember.png",
       "PackagePath": "staticwebassets\\img\\produtos\\JoãoVictorAnzolinMember.png"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\Poppa-jotta.jpg",
+      "PackagePath": "staticwebassets\\img\\produtos\\Poppa-jotta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\WIN_20240802_08_02_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\produtos\\WIN_20240802_08_02_53_Pro.jpg"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\WIN_20240816_11_40_42_Pro.jpg",
@@ -283,6 +491,10 @@
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\WIN_20240816_11_42_34_Pro.jpg",
       "PackagePath": "staticwebassets\\img\\produtos\\WIN_20240816_11_42_34_Pro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\WIN_20241128_13_36_53_Pro.jpg",
+      "PackagePath": "staticwebassets\\img\\produtos\\WIN_20241128_13_36_53_Pro.jpg"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\img\\produtos\\borba.svg",
@@ -309,12 +521,20 @@
       "PackagePath": "staticwebassets\\img\\produtos\\tomato.png"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\agricultor.js",
+      "PackagePath": "staticwebassets\\js\\agricultor.js"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\carrinho.js",
       "PackagePath": "staticwebassets\\js\\carrinho.js"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\compras.js",
       "PackagePath": "staticwebassets\\js\\compras.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\homevend.js",
+      "PackagePath": "staticwebassets\\js\\homevend.js"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\mapa.js",
@@ -325,8 +545,16 @@
       "PackagePath": "staticwebassets\\js\\perfil.js"
     },
     {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\produto.js",
+      "PackagePath": "staticwebassets\\js\\produto.js"
+    },
+    {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\sobre.js",
+      "PackagePath": "staticwebassets\\js\\sobre.js"
     },
     {
       "Id": "C:\\Users\\SENAI3EM\\Desktop\\BackEndEcoAgricola-master\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

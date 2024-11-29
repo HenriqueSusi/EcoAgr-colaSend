@@ -31,5 +31,6 @@ namespace testeNav.Models
             return Quantidade * Preco;
         }
     }
+   
 
 }

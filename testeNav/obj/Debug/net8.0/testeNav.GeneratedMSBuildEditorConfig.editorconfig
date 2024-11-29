@@ -90,16 +90,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWdyaWN1bHRvcmVzXEFncmljdWx0b3Jlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Carrinho/Compras.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cQ29tcHJhcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Carrinho/Confirmacao.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cQ29uZmlybWFjYW8uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Carrinho/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Carrinho/Pagamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FycmluaG9cUGFnYW1lbnRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Compras/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcHJhc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/HomeVendedor/EditarPerfil.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZlbmRlZG9yXEVkaXRhclBlcmZpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/HomeVendedor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVZlbmRlZG9yXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Home/Index.cshtml]
@@ -114,8 +122,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9qYVxMb2phLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/MaisProdutos/MaisProdutos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpc1Byb2R1dG9zXE1haXNQcm9kdXRvcy5jc2h0bWw=
+[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/MaisProdutos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpc1Byb2R1dG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Mapa/Mapa.cshtml]
@@ -136,6 +144,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Shared/_LayoutSemMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTZW1NZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/SENAI3EM/Desktop/BackEndEcoAgricola-master/BackEndEcoAgricola-master/testeNav/Views/Shared/_LoginPartial.cshtml]

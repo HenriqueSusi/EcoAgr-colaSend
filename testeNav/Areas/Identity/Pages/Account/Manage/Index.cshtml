@@ -1,60 +1,88 @@
 ﻿@page
 @model IndexModel 
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = "Perfil";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
-<h3>@ViewData["Title"]</h3>
+<head>
+    <link rel="stylesheet" href="~/css/site.css"/>
+</head>
+
+
 <partial name="_StatusMessage" for="StatusMessage" />
-<div class="row">
-    <div class="col-md-6">
+<div id="Main" style="margin-top: 100px">
+    <div >
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
             <!-- Imagem -->
-            <img id="profileImage" src="@(string.IsNullOrEmpty(Model.Input.foto) ? Url.Content("~/img/default.jpg") : Url.Content($"~/img/{Model.Input.foto}"))" class="rounded-circle mb-3" style="width: 24vh; height: 24vh; object-fit: cover; cursor:pointer;" />
-
-            <!-- Campo Nome -->
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Nome" class="form-control" placeholder="Nome" />
-                <label asp-for="Input.Nome">Nome do Usuário</label>
-                <span asp-validation-for="Input.Nome" class="text-danger"></span>
+            <div style="display: flex; align-items: center;">
+                <img id="profileImage" src="@(string.IsNullOrEmpty(Model.Input.foto) ? Url.Content("~/img/default.jpg") : Url.Content($"~/img/{Model.Input.foto}"))" class="rounded-circle mb-3" style="width: 24vh; height: 24vh; object-fit: cover; cursor:pointer;" />
+                <div style="display: flex; flex-direction: column; margin-left:15px">
+                    <h4 style="margin: 0">Nome</h4>
+                    <p style="margin: 0">Email</p>
+                    <p style="margin: 0">Telefone</p>
+                    <a href="#form" style="
+                        display: flex;
+                        background-color: var(--main-green);
+                        width: 200px;
+                        color: white;
+                        border: none;
+                        border-radius: 500px;
+                        height: 30px;
+                        margin-top: 10px;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                    ">Editar Perfil</a>
+                </div>
             </div>
 
-            <!-- Campo Email -->
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" placeholder="Email" />
-                <label asp-for="Input.Email">Email do Usuário</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            <hr />
+            <div id="form">
+                <!-- Campo Nome -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Nome" class="form-control" placeholder="Nome" />
+                    <label asp-for="Input.Nome">Nome do Usuário</label>
+                    <span asp-validation-for="Input.Nome" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Email -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Email" class="form-control" placeholder="Email" />
+                    <label asp-for="Input.Email">Email do Usuário</label>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <!-- Campo Telefone -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Telefone" />
+                    <label asp-for="Input.PhoneNumber">Telefone do Usuário</label>
+                    <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Tipo" class="form-control" placeholder="Tipo do Usuario" disabled />
+                    <label asp-for="Input.Tipo">Tipo de Usuário</label>
+                    <span asp-validation-for="Input.Tipo" class="text-danger"></span>
+                </div>
+
+                <!-- Campo CPF -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.CPF" class="form-control" placeholder="CPF" />
+                    <label asp-for="Input.CPF">CPF</label>
+                    <span asp-validation-for="Input.CPF" class="text-danger"></span>
+                </div>
+
+                <!-- Campo CNPJ -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.CNPJ" class="form-control" placeholder="CNPJ" />
+                    <label asp-for="Input.CNPJ">CNPJ</label>
+                    <span asp-validation-for="Input.CNPJ" class="text-danger"></span>
+                </div>
+                <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
             </div>
 
-            <!-- Campo Telefone -->
-            <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Telefone" />
-                <label asp-for="Input.PhoneNumber">Telefone do Usuário</label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Tipo" class="form-control" placeholder="Tipo do Usuario" disabled />
-                <label asp-for="Input.Tipo">Tipo de Usuário</label>
-                <span asp-validation-for="Input.Tipo" class="text-danger"></span>
-            </div>
-
-            <!-- Campo CPF -->
-            <div class="form-floating mb-3">
-                <input asp-for="Input.CPF" class="form-control" placeholder="CPF" />
-                <label asp-for="Input.CPF">CPF</label>
-                <span asp-validation-for="Input.CPF" class="text-danger"></span>
-            </div>
-
-            <!-- Campo CNPJ -->
-            <div class="form-floating mb-3">
-                <input asp-for="Input.CNPJ" class="form-control" placeholder="CNPJ" />
-                <label asp-for="Input.CNPJ">CNPJ</label>
-                <span asp-validation-for="Input.CNPJ" class="text-danger"></span>
-            </div>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
         </form>
     </div>
 </div>

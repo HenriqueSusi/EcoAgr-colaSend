@@ -18,12 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\HomeVendedor\EditarPerfil.cshtml" />
+    <None Include="Views\HomeVendedor\Index.cshtml" />
     <None Include="Views\Produtos\Create.cshtml" />
     <None Include="Views\Produtos\Details.cshtml" />
     <None Include="Views\Produtos\Index.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.10" />
@@ -34,6 +37,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
+    <PackageReference Include="System.Drawing.Common" Version="9.0.0" />
     <PackageReference Include="xunit.extensibility.core" Version="2.9.2" />
   </ItemGroup>
 

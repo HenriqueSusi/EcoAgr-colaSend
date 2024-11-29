@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using testeNav.Data;
 using testeNav.Extensoes;
@@ -15,64 +16,63 @@ namespace testeNav.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
 
-        // Construtor unificado para injetar o UserManager e o ApplicationDbContext
+       
         public ProdutosController(UserManager<ApplicationUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
             _context = context;
         }
 
-        //public async Task<IActionResult> SearchProd(Guid inCategoria, string inNome)
-        //{
-        //    var prod = await _context.Produtos.Include(c => c.Nome).ToListAsync();
+        public async Task<IActionResult> SearchProd(string inNome)
+        {
+            
+            var query = _context.Produtos.AsQueryable();
 
-        //    if (inNome != null)
-        //    {
-        //        inNome = inNome.Trim().ToUpper();
-        //        prod = prod.Where(i => i.Nome.ToUpper().Contains(inNome)).ToList();
-        //    }
+            
+            if (!string.IsNullOrEmpty(inNome))
+            {
+                inNome = inNome.Trim().ToUpper();
+                query = query.Where(i => i.Nome.ToUpper().Contains(inNome));
+            }
 
-        //    if (!inCategoria.ToString().Equals("00000000-0000-0000-0000-000000000000"))
-        //    {
-        //        prod = prod.Where(i => i.Id = inCategoria).ToList();
-        //    }
+            
+            var produtos = await query.ToListAsync();
 
-        //    ViewData["Categ"] = await _context.Produtos.ToListAsync();
-        //    return View("RelatProd", prod);
-        //}
+           
+            return View("Index", produtos);
+        }
 
-
-        // Perfil do usuário, verificando se é vendedor ou cliente
-        [Authorize]  // Garante que o usuário esteja autenticado
+        
+        [Authorize]  
         public async Task<IActionResult> Perfil()
         {
-            // Obtém o usuário atual
+            
             var user = await _userManager.GetUserAsync(User);
 
-            // Verifica se o usuário tem o role de "Vendedor"
+            
             if (user != null && await _userManager.IsInRoleAsync(user, "Vendedor"))
             {
-                // Redireciona para a view específica do vendedor
+               
                 return View("Index");  
             }
 
-            // Se o usuário for um "Cliente", redireciona para a view específica do cliente
-            return View("Index");  // Certifique-se de que a view "HomeCliente" exista
+            
+            return View("Index");  
         }
 
         public async Task<IActionResult> Index()
         {
-            // Recupera todos os produtos do banco de dados
+            
             var produtos = await _context.Produtos.ToListAsync();
 
-            // Verifica se a lista de produtos está nula
+            
             if (produtos == null || !produtos.Any())
             {
-                // Inicializa uma lista vazia se não houver produtos
+                
                 produtos = new List<ProdutoModel>();
             }
 
-            // Passa a lista de produtos para a view
+            
             return View(produtos);
         }
 
@@ -87,7 +87,7 @@ namespace testeNav.Controllers
         // GET: ProdutosController/Details/5
         public ActionResult Details(int Id)
         {
-            var produto = _context.Produtos.Find(Id); // Buscar o produto pelo ID
+            var produto = _context.Produtos.Find(Id); 
 
             if (produto == null)
             {
@@ -111,38 +111,39 @@ namespace testeNav.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Define o produto como ativo por padrão
+                
                 produto.Ativo = true;
 
-                // Lógica para salvar a imagem
+                
                 if (ImagemUrl != null && ImagemUrl.Length > 0)
                 {
-                    // Defina o caminho onde a imagem será salva
+                    
                     var filePath = Path.Combine("wwwroot/img/produtos", ImagemUrl.FileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
-                        await ImagemUrl.CopyToAsync(stream); // Salva a imagem no servidor
+                        await ImagemUrl.CopyToAsync(stream); 
                     }
 
-                    produto.ImagemUrl = $"/img/produtos/{ImagemUrl.FileName}"; // Armazena o caminho da imagem
+                    produto.ImagemUrl = $"/img/produtos/{ImagemUrl.FileName}"; 
                 }
 
-                // Adiciona o produto ao banco de dados com o status "Ativo"
+                
                 _context.Produtos.Add(produto);
-                await _context.SaveChangesAsync(); // Salva as alterações no banco de dados
+                await _context.SaveChangesAsync(); 
 
-                return RedirectToAction("Index"); // Redireciona para a lista de produtos
+                return RedirectToAction("Index"); 
             }
 
-            return View(produto); // Retorna a view se houver erro de validação
+            return View(produto);
         }
 
-        // GET: ProdutosController/Edit
-        public ActionResult Edit(int id)
+            // GET: ProdutosController/Edit
+            public ActionResult Edit(int id)
         {
             return View();
         }
+
 
         // POST: ProdutosController/Edit
         [HttpPost]
@@ -159,7 +160,7 @@ namespace testeNav.Controllers
             }
         }
 
-        // Métodos para manipular o carrinho na sessão 
+       
         private CarrinhoModel ObterCarrinho()
         {
             var carrinho = HttpContext.Session.GetObjectFromJson<CarrinhoModel>("Carrinho") ?? new CarrinhoModel();

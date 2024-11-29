@@ -1,10 +1,81 @@
 ﻿@model CarrinhoModel
 
+@{
+    ViewData["Title"] = "Carrinho";
+}
+
+
+
+
 <body>
     <head>
+        <link rel="stylesheet" href="~/css/nav.css" />
+        <link rel="stylesheet" href="~/css/site.css">
+        <link rel="stylesheet" href="~/css/responsivo.css"/>
         <link rel="stylesheet" href="~/css/carrinho.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </head>
+
+    <div class="headerResponsive">
+        <div class="logo1">
+            <img src="~/img/Logo.svg" />
+            <p style="color: white">EcoAgrícola</p>
+        </div>
+        <button style="background-color: transparent; border: none;" id="menuopen" onclick="menuOpen()">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+
+    <div id="sidebarResponsive">
+        <div id="nav">
+
+            <button id="menuclose" class="navitem" style="background-color: transparent; border: none;" onclick="menuclose()">
+                <i class="bi bi-x-lg"></i>
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index">Fechar</a>
+            </button>
+
+            <!-- Home -->
+            <div class="navitem">
+                <i class="fa-solid fa-house icon"></i>
+                <a class="" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+            </div>
+            <!-- Produtos -->
+            <div class="navitem">
+                <i class="fa-solid fa-leaf icon"></i>
+                <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+            </div>
+            <!-- Agricultores -->
+            <div class="navitem">
+                <i class="fa-solid fa-user icon"></i>
+                <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
+            </div>
+            <!-- Mapa -->
+            <div class="navitem">
+                <i class="fa-solid fa-user icon"></i>
+                <a class="" asp-area="" asp-controller="Mapa" asp-action="Mapa">Mapa</a>
+            </div>
+
+            <!-- Compras -->
+            <div class="navitem">
+                <i class="bi bi-basket-fill icon"></i>
+                <a class="" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+            </div>
+            <!-- Carrinho -->
+            <div class="navitem">
+                <i class="fa-solid fa-cart-shopping icon"></i>
+                <a class="" asp-area="" asp-controller="Carrinho" asp-action="Index">Carrinho</a>
+            </div>
+            <!-- Sobre -->
+            <div class="navitem">
+                <i class="bi bi-info-circle icon"></i>
+                <a class="" asp-area="" asp-controller="About" asp-action="about">Sobre</a>
+            </div>
+        </div>
+        <div class="line white"></div>
+        <div id="bottom">
+            <partial name="_LoginPartial" />
+        </div>
+    </div>
 
     <div id="main">
         <p class="first hidden">Carrinho</p>
@@ -60,20 +131,20 @@
                     </div>
                 </div>
 
-                <div class="content">
-                    <p><span id="total-@item.Produto.Id" class="total-item">@item.PrecoTotal.ToString("C")</span></p>
+                <div class="content" >
+                    <p>R$ <span id="total-@item.Produto.Id" class="total-item">@item.PrecoTotal</span></p>
 
                     <form asp-action="RemoverDoCarrinho" method="post">
                         <input type="hidden" name="produtoId" value="@item.Produto.Id" />
-                        <button type="submit" class="btn btn-danger">Remover</button>
+                        <button type="submit" class="btn btn-danger" style="margin-bottom: 20px; margin-left: 30px"><i class="bi bi-trash-fill"></i></button>
                     </form>
                 </div>
             </div>
         }
 
-        <div style="margin-top: 50px; margin-left: 65%;">
-            <h3 id="total-geral">Total: @Model.Total.ToString("C")</h3>
-            <a href="@Url.Action("Checkout", "Carrinho")" id="btn">Finalizar Compra</a>
+        <div style="margin-top: 50px; margin-left: 80%; height: 300px;">
+            <h3 id="total-geral" style="margin-bottom: 20px;">Total: @Model.Total.ToString("C")</h3>
+            <a href="@Url.Action("Pagamento", "Carrinho")" id="btn" style="color: white; width: 500px; padding: 10px 60px; ">Finalizar Compra</a>
         </div>
     </div>
 

@@ -6,31 +6,100 @@
 
 
 <head>
-    <link rel="stylesheet" href="~/css/site.css"/>
-    <link rel="stylesheet" href="~/css/carrousel.css" />
+    <link rel="stylesheet" href="~/css/nav.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/responsivo.css" />
+
     <link rel="stylesheet" href="~/css/CardProduto.css" />
 </head>
 
+<div class="headerResponsive">
+    <div class="logo1">
+        <img src="~/img/Logo.svg" />
+        <p style="color: white">EcoAgrícola</p>
+    </div>
+    <button style="background-color: transparent; border: none;" id="menuopen" onclick="menuOpen()">
+        <i class="bi bi-list"></i>
+    </button>
+</div>
 
-<a asp-action="Create" class="btn btn-primary">Adicionar</a>
-<div id="Main">
-    <div id="SearchContainer">
-        <a href="#card_agricultor"><p>Produtos</p></a>
-        <div id="box">
-            <i class="fa-solid fa-magnifying-glass iconsearch"></i>
-            <input type="text" name="Search" id="input_search" placeholder="Encontre o que precisa:">
+<div id="sidebarResponsive">
+    <div id="nav">
+
+        <button id="menuclose" class="navitem" style="background-color: transparent; border: none;" onclick="menuclose()">
+            <i class="bi bi-x-lg"></i>
+            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Fechar</a>
+        </button>
+
+        <!-- Home -->
+        <div class="navitem">
+            <i class="fa-solid fa-house icon"></i>
+            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+        </div>
+        <!-- Produtos -->
+        <div class="navitem">
+            <i class="fa-solid fa-leaf icon"></i>
+            <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+        </div>
+        <!-- Agricultores -->
+        <div class="navitem">
+            <i class="fa-solid fa-user icon"></i>
+            <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
+        </div>
+        <!-- Mapa -->
+        <div class="navitem">
+            <i class="fa-solid fa-user icon"></i>
+            <a class="" asp-area="" asp-controller="Mapa" asp-action="Mapa">Mapa</a>
+        </div>
+
+        <!-- Compras -->
+        <div class="navitem">
+            <i class="bi bi-basket-fill icon"></i>
+            <a class="" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+        </div>
+        <!-- Carrinho -->
+        <div class="navitem">
+            <i class="fa-solid fa-cart-shopping icon"></i>
+            <a class="" asp-area="" asp-controller="Carrinho" asp-action="Index">Carrinho</a>
+        </div>
+        <!-- Sobre -->
+        <div class="navitem">
+            <i class="bi bi-info-circle icon"></i>
+            <a class="" asp-area="" asp-controller="About" asp-action="about">Sobre</a>
         </div>
     </div>
-    <div class="line pad"></div>
+    <div class="line white"></div>
+    <div id="bottom">
+        <partial name="_LoginPartial" />
+    </div>
+</div>
 
-    <div class="cardline"
-    style="
-        display: flex;
-        flex-wrap: wrap;
-        
-    "    
+
+<div id="main">
+    <form>
+        <div id="SearchContainer">
+            <a href="#card_agricultor"><p>Produtos</p></a>
+            <div id="box">
+                <button asp-action="SearchProd" style="background-color: transparent; border: none; margin-right: 10px; margin-left: 10px; display: flex; justify-content: center;height: 100%;display: flex;align-items: center;">
+                    <i class="fa-solid fa-magnifying-glass iconsearch"></i>
+                </button>
+                <input type="text" name="inNome" id="input_search" placeholder="Encontre o que precisa:">
+            </div>
+        </div>
+    </form>
+
+    <div class="line pad" style="margin-bottom: 20px"></div>
+     @* <a asp-action="Create" style="background-color: var(--main-green); color: white; width: 200px; padding: 10px 50px; margin-top: 60px; border-radius: 5px; height: 50px">Adicionar</a>  *@
+
+
+    <div class="cardline" 
+        style="
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        "    
     
-    >
+        >
         @if (Model != null && Model.Any())
         {
             @foreach (var produto in Model)
@@ -45,14 +114,15 @@
                         height: 420px;
                         margin: 20px;
                         align-items: start;
-                        padding-left: 15px
+                        padding-left: 20px;
+                        padding-right: 20px;
                 ">
 
                     <div class="imgcard"
                          style="
                             display: flex;
                             border-radius: 20px;
-                            width: 95%;
+                            width: 100%;
                             height: 60%; 
                             overflow: hidden;
                             background-color: #fff;
@@ -74,7 +144,7 @@
                         }
                         else
                         {
-                            <img src="~/img/Logo.svg" alt="Imagem não disponível" class="item"> <!-- Imagem de placeholder -->
+                            <img src="~/img/Logo.svg" alt="Imagem não disponível" class="item"> 
                         }
                     </div>
 
@@ -110,27 +180,5 @@
         }
 
 
-
-        <form>
-            <div id="filtros">
-                <div class="row my-3">
-                    <div class="col-sm-12 col-md-6 col-lg-5">
-                        <label class="form-label">Nome:</label>
-                        <input class="form-control" name="inNome" type="text" class="ms-3 me-3" />
-                    </div>
-                    <div class="col-sm-3 col-md-3 col-lg-2 my-2">
-                        <br />
-                        <button asp-action="SearchProd" class="btn btn-warning text-dark ">Filtrar <svg bootstrap-icon="Filter" height="24" width="24"></svg></button>
-                    </div>
-
-                </div>
-            </div>
-        </form>
-
-    <script>
-        function confirmarDelecao() {
-            return confirm("Tem certeza que deseja deletar este produto?");
-        }
-    </script>
-
-
+    </div>
+<script src="~/js/produto.js"></script>

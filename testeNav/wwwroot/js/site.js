@@ -1,5 +1,4 @@
-﻿
-function showSidebar() {
+﻿function showSidebar() {
     const sidebar = document.querySelector('#sidebar-mobile');
     sidebar.style.display = 'flex';
 }
@@ -22,4 +21,19 @@ function showSlides() {
     if (slideIndex > slides.length) { slideIndex = 1; }
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 5000);
+}
+
+var menuopen = document.getElementById('menuopen');
+var menuclose = document.getElementById('menuclose');
+var sidebarResp = document.getElementById('sidebarResponsive');
+
+function menuOpen() {
+    sidebarResp.style.display = 'flex'
+}
+
+function menuclose() {
+    sidebarResp.style.display = 'none'
+}
+function confirmarDelecao() {
+    return confirm("Tem certeza que deseja deletar este produto?");
 }

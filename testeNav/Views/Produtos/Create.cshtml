@@ -2,15 +2,83 @@
 
 <head>
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="~/css/carrousel.css" />
+    <link rel="stylesheet" href="~/css/responsivo.css" />
     <link rel="stylesheet" href="~/css/modal.css" />
+    <link rel="stylesheet" href="~/css/nav.css" />
+
+
+    <link rel="stylesheet" href="~/css/carrousel.css" />
 </head>
 
+@{
+    Layout = "~/Views/Shared/_LayoutSemMenu.cshtml";
+}
 
-<div id="Main">
+<div class="headerResponsive">
+    <div class="logo1">
+        <img src="~/img/Logo.svg" />
+        <p style="color: white">EcoAgrícola</p>
+    </div>
+    <button style="background-color: transparent; border: none;" id="menuopen" onclick="menuOpen()">
+        <i class="bi bi-list"></i>
+    </button>
+</div>
+
+<div id="sidebarResponsive">
+    <div id="nav">
+
+        <button id="menuclose" class="navitem" style="background-color: transparent; border: none;" onclick="menuclose()">
+            <i class="bi bi-x-lg"></i>
+            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Fechar</a>
+        </button>
+
+        <!-- Home -->
+        <div class="navitem">
+            <i class="fa-solid fa-house icon"></i>
+            <a class="" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+        </div>
+        <!-- Produtos -->
+        <div class="navitem">
+            <i class="fa-solid fa-leaf icon"></i>
+            <a class="" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+        </div>
+        <!-- Agricultores -->
+        <div class="navitem">
+            <i class="fa-solid fa-user icon"></i>
+            <a class="" asp-area="" asp-controller="Agricultores" asp-action="agricultores">Agricultores</a>
+        </div>
+        <!-- Mapa -->
+        <div class="navitem">
+            <i class="fa-solid fa-user icon"></i>
+            <a class="" asp-area="" asp-controller="Mapa" asp-action="Mapa">Mapa</a>
+        </div>
+
+        <!-- Compras -->
+        <div class="navitem">
+            <i class="bi bi-basket-fill icon"></i>
+            <a class="" asp-area="" asp-controller="Compras" asp-action="Index">Compras</a>
+        </div>
+        <!-- Carrinho -->
+        <div class="navitem">
+            <i class="fa-solid fa-cart-shopping icon"></i>
+            <a class="" asp-area="" asp-controller="Carrinho" asp-action="Index">Carrinho</a>
+        </div>
+        <!-- Sobre -->
+        <div class="navitem">
+            <i class="bi bi-info-circle icon"></i>
+            <a class="" asp-area="" asp-controller="About" asp-action="about">Sobre</a>
+        </div>
+    </div>
+    <div class="line white"></div>
+    <div id="bottom">
+        <partial name="_LoginPartial" />
+    </div>
+</div>
+
+<div id="main" style="width: 1400px;">
     <div id="modal">
         <form asp-action="Create" method="post" enctype="multipart/form-data">
-            <!-- Adicionado enctype -->
+            
             <div class="modal-body">
                 <div class="img-div">
                     <div id="image-preview" style="width: 200px; height: 200px; border: 1px solid var(--main-green); border-radius:15px; display: flex; align-items: center; justify-content: center;">
@@ -39,16 +107,15 @@
                 <label for="Descricao">Descrição</label>
                 <textarea class="text-modal" asp-for="Descricao" required></textarea>
             </div>
-            <div class="modal-footer">
-                <button type="submit" class="btn-modal">Salvar</button>
-                <a asp-action="Index" class="btn-modals">Cancelar</a>
+            <div class="modal-footer" style="justify-content: center;">
+                <button type="submit"  class="btn-modal">Salvar</button>
+                <a href="@Url.Action("Index", "HomeVendedor")" style="color: white" class="btn-modals">Cancelar</a>
             </div>
         </form>
 
     </div>
 
 </div>
-
 
 <!-- JavaScript -->
 <script>
@@ -71,38 +138,9 @@
         const previewDiv = document.getElementById('image-preview');
         const inputFile = document.getElementById('ImagemUrl');
 
-        // Limpa o conteúdo da div de pré-visualização
         previewDiv.innerHTML = '<span>Imagem não carregada</span>';
 
-        // Limpa o valor do input file para permitir o upload da mesma imagem novamente
+        
         inputFile.value = '';
     }
 </script>
-
-@* 
-<h2>Criar Novo Produto</h2>
-
-<form asp-action="Criar" method="post">
-    <div class="form-group">
-        <label for="Nome">Nome</label>
-        <input type="text" class="form-control" asp-for="Nome" required />
-    </div>
-
-    <div class="form-group">
-        <label for="Descricao">Descrição</label>
-        <textarea class="form-control" asp-for="Descricao" required></textarea>
-    </div>
-
-    <div class="form-group">
-        <label for="Preco">Preço</label>
-        <input type="number" step="0.01" class="form-control" asp-for="Preco" required />
-    </div>
-
-    <div class="form-group">
-        <label for="ImagemUrl">URL da Imagem</label>
-        <input type="file" class="form-control" asp-for="ImagemUrl" style="display:none;"
-                       accept=".jpg,.jpeg,.png, .gif" onchange="validateFileType()"/>
-    </div>
-
-
-</form> *@

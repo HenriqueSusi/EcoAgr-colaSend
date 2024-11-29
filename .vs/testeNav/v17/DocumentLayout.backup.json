@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\adm\\videos\\backendecoagricola-master\\testenav\\wwwroot\\css\\responsivo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\wwwroot\\css\\responsivo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\adm\\videos\\backendecoagricola-master\\testenav\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\adm\\videos\\backendecoagricola-master\\testenav\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|c:\\users\\adm\\videos\\backendecoagricola-master\\testenav\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{63520FA0-04B1-494D-AC18-E8C3B7A00FAE}|testeNav\\testeNav.csproj|solutionrelative:testenav\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "testeNav\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "testeNav\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-28T00:14:08.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "testeNav\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "testeNav\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAC4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-27T21:52:07.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "responsivo.css",
+              "DocumentMoniker": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\css\\responsivo.css",
+              "RelativeDocumentMoniker": "testeNav\\wwwroot\\css\\responsivo.css",
+              "ToolTip": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\wwwroot\\css\\responsivo.css",
+              "RelativeToolTip": "testeNav\\wwwroot\\css\\responsivo.css",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-27T21:49:20.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "testeNav\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ADM\\Videos\\BackEndEcoAgricola-master\\testeNav\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "testeNav\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAAAM8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-27T21:51:26.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

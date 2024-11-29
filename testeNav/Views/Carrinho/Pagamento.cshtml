@@ -1,0 +1,120 @@
+﻿@model CarrinhoModel
+
+@{
+    ViewData["Title"] = "Pagamento";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/carrinho.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+
+
+<div id="main" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+
+    <div style="display: flex; width: 50%; height: auto; border: 1px solid black; border-radius: 20px; justify-content: center; margin-top: 50px">
+        <div style="display: flex; flex-direction: column; width: 90%; justify-content: start; align-items: center; margin-top: 5%;">
+            <h2>Pagamento</h2>
+            <h4>Total da Compra: <strong>R$ @Model.Total.ToString("F2")</strong></h4>
+            <form asp-action="ConcluirPagamento" method="post" style="align-items: center;">
+                <div>
+                    <label for="metodoPagamento">Método de Pagamento:</label><br />
+                    <select id="metodoPagamento" name="metodoPagamento" required style="width: 400px; height: 40px; border-radius: 5px; margin-bottom: 10px;">
+                        <option value="CartaoCredito">Cartão de Crédito</option>
+                        <option value="Pix">Pix</option>
+                        <option value="Boleto">Boleto</option>
+                    </select>
+                </div>
+            <button type="submit" class="btn btn-primary" style="background-color: var(--main-green); border: none; align-items: center;">Concluir Pagamento</button>
+            </form>
+
+            <div id="pix" style="margin-top: 10px; display: none;">
+                <div id="Qr" style="align-items: center; justify-content: center; text-align: center;">
+                    <img src="~/img/QRCODE.webp">
+                        
+                    </img>
+                    <div>
+                        <p>Código QRCode:</p>
+                        <p style="border-radius: 10px; border: 1px solid black; width: 500px; padding: 10px;height: 90px; overflow: clip ">
+                            00020126450014BR.GOV.BCB.PIX0114+5511998765432031452040 000530398654041.005802BR59136009SaoPaulo6108054090006 21905216304ABCD
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="cartao" style="margin-top: 10px; display: none;">
+                <div>
+                    <form>
+                        <div>
+                            <input style="width: 410px; height: 40px; border-radius: 5px; border: 1px solid black; margin-bottom: 10px; padding-left: 5px;" placeholder="Número do Cartão"/>
+                        </div>
+
+                        <div>
+                            <input style="width: 410px; height: 40px; border-radius: 5px; border: 1px solid black; margin-bottom: 10px; padding-left: 5px;" placeholder="Nome do Títular"/>
+                        </div>
+
+                        <div style="display: flex; justify-content: space-between">
+                            <div>
+                                <input style="width: 200px; height: 40px; border-radius: 5px; border: 1px solid black; margin-bottom: 10px; padding-left: 5px;" placeholder="MM/YY"/>
+                            </div>
+
+                            <div>
+                                <input style="width: 200px; height: 40px; border-radius: 5px; border: 1px solid black; margin-bottom: 10px; padding-left: 5px;" placeholder="CVV"/>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="background-color: var(--main-green); border: none; align-items: center;">Cadastrar Cartão</button>
+
+                    </form>
+
+                </div>
+            </div>
+
+            <div id="boleto"  style="margin-top: 10px; display: none;">
+                <div style="width: 100%;">
+                    <img src="~/img/Boleto Bancario - Padrao Banco do Brasil 2.png" style="width: 100%;"/>
+                </div>
+            </div>
+
+
+            <br />
+            <p>
+                Obrigado por contar conosco!
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+
+
+    document.getElementById('metodoPagamento').addEventListener('change', function() {
+        var pix = document.getElementById('pix');
+        var cartao = document.getElementById('cartao');
+        var boleto = document.getElementById('boleto');
+
+        if (this.value === 'Pix') {
+            pix.style.display = 'block';
+            boleto.style.display = 'none';
+            cartao.style.display = 'none';
+
+        }
+        if (this.value === 'CartaoCredito') {
+            cartao.style.display = 'block';
+            boleto.style.display = 'none';
+            pix.style.display = 'none';
+        }
+        if (this.value === 'Boleto') {
+            boleto.style.display = 'block';
+            pix.style.display = 'none';
+            cartao.style.display = 'none';
+        }
+});
+
+</script>

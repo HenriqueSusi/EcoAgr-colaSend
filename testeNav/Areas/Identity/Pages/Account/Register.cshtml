@@ -22,12 +22,9 @@
                 Cadastre-se e encontre maior visibilidade para o seu negócio
             </p>
 
-            <a href="#choose"><h3>Vamos Começar!</h3></a>
+            <a href="#ClienteName"><h3>Vamos Começar!</h3></a>
 
-            <div style="display: flex;" class="choose " id="choose">
-                <button type="button" class="btnLoja" id="btnLoja" style="width: 197px; margin-right: 10px; background-color: transparent; border: 1px solid var(--main-green); color: var(--main-green)">Loja</button>
-                <button type="button" id="btnPessoaFisica" style="width: 197px; border: 1px solid var(--main-green);">Pessoa Física</button>
-            </div>
+
 
             <div asp-validation-summary="ModelOnly" role="alert"></div>
 
@@ -120,14 +117,14 @@
                 </div>
             </div>
 
-            <div class="form-floating mb-3">
-                <select asp-for="Input.TipodeUsuario" class="form-select">
+            <div class="formInput">
+                <label asp-for="Input.TipodeUsuario">Tipo de Usuário</label>
+                <select asp-for="Input.TipodeUsuario" class="inputLogin">
                     <option value="">Selecione o tipo de usuário</option>
-
                     <option value="Vendedor">Vendedor</option>
                     <option value="Cliente">Cliente</option>
                 </select>
-                <label asp-for="Input.TipodeUsuario">Tipo de Usuario</label>
+
                 <span asp-validation-for="Input.TipodeUsuario" class="text-danger"></span>
             </div>
 

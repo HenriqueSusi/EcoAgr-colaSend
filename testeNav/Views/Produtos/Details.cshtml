@@ -10,12 +10,12 @@
 
 <p>Preço: @Model.Preco.ToString("C")</p>
 
-<!-- Verifique se o caminho da imagem está correto -->
+
 <img src="/img/produtos/@Model.ImagemUrl" style="max-width: 200px;" />
 
 <br />
 
-<!-- Ajustes na sintaxe de Url.Action -->
+
 <a href="@Url.Action("AdicionarAoCarrinho", "Carrinho", new { id = Model.Id })" class="btn btn-success">Adicionar ao Carrinho</a>
 <a href="@Url.Action("Index", "Produto")" class="btn btn-secondary">Voltar à lista de produtos</a>
 </div>

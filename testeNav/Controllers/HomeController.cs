@@ -17,6 +17,25 @@ namespace testeNav.Controllers
         private readonly ApplicationDbContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
+        public async Task<IActionResult> SearchProd(string inNome)
+        {
+            
+            var query = _context.Produtos.AsQueryable();
+
+            
+            if (!string.IsNullOrEmpty(inNome))
+            {
+                inNome = inNome.Trim().ToUpper();
+                query = query.Where(i => i.Nome.ToUpper().Contains(inNome));
+            }
+
+          
+            var produtos = await query.ToListAsync();
+
+            
+            return View("Index", produtos);
+        }
+
         public HomeController(ApplicationDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
@@ -25,19 +44,19 @@ namespace testeNav.Controllers
 
         public async Task<IActionResult> Index()
         {
-            // Carregar o usuário atual (se autenticado)
+           
             ApplicationUser usuario = null;
             if (User.Identity.IsAuthenticated)
             {
                 usuario = await _userManager.GetUserAsync(User);
             }
 
-            // Carregar produtos ativos
+          
             var produtosAtivos = await _context.Produtos
                 .Where(p => p.Ativo)
                 .ToListAsync();
 
-            // Criar e preencher o ViewModel
+           
             var viewModel = new HomeViewModel
             {
                 Usuario = usuario,
@@ -47,7 +66,7 @@ namespace testeNav.Controllers
             return View(viewModel);
         }
 
-        // GET: ProdutosController
+        
         public IActionResult Produtos()
         {
             var produtos = _context.Produtos.ToList();
@@ -57,7 +76,7 @@ namespace testeNav.Controllers
         // GET: ProdutosController/Details/5
         public ActionResult Details(int id)
         {
-            var produto = _context.Produtos.Find(id); // Buscar o produto pelo ID
+            var produto = _context.Produtos.Find(id);
 
             if (produto == null)
             {

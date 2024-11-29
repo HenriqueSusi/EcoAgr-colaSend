@@ -1,6 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-#nullable disable
+﻿#nullable disable
 
 using System;
 using System.Collections.Generic;
@@ -33,7 +31,8 @@ namespace testeNav.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private string _caminho;
+        private readonly IWebHostEnvironment _hostEnvironment;
+
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
@@ -49,24 +48,16 @@ namespace testeNav.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
-            _caminho = hostEnvironment.WebRootPath;
+            _hostEnvironment = hostEnvironment;
             _roleManager = roleManager;
         }
 
-        
         [BindProperty]
         public InputModel Input { get; set; }
 
-        
         public string ReturnUrl { get; set; }
-
-        
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
-        public string Email { get; internal set; }
-        public string Password { get; internal set; }
-        public string UserRole { get; internal set; }
 
-        
         public class InputModel
         {
             [Required]
@@ -86,24 +77,17 @@ namespace testeNav.Areas.Identity.Pages.Account
             [Display(Name = "Password")]
             public string Password { get; set; }
 
-          
-
-            /////////////////////////////
-
             [Display(Name = "Foto do Usuário")]
             public string foto { get; set; }
-
 
             [Required]
             [Display(Name = "UF")]
             public TipoUf UF { get; set; }
 
             [Required]
-            [Display(Name = "Tipo de Usuario")]
+            [Display(Name = "Tipo de Usuário")]
             public TipoUsuario TipodeUsuario { get; set; }
 
-
-            // Propriedades específicas para PessoaFisica
             [Display(Name = "CPF")]
             public string CPF { get; set; }
 
@@ -113,12 +97,10 @@ namespace testeNav.Areas.Identity.Pages.Account
             [Display(Name = "Endereço")]
             public string Endereco { get; set; }
 
-            // Propriedades específicas para Empresa
             [Display(Name = "CNPJ")]
             public string CNPJ { get; set; }
 
-            
-            [Display(Name = "Nome")]
+            [Display(Name = "Nome da Loja")]
             public string NomeDaLoja { get; set; }
         }
 
@@ -138,6 +120,7 @@ namespace testeNav.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
@@ -145,7 +128,7 @@ namespace testeNav.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Nome, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
-                // Preenche os dados do usuário
+                
                 user.foto = Input.foto;
                 user.TipoUser = (Models.TipoUsuario)Input.TipodeUsuario;
                 user.Uf = Input.UF;
@@ -156,10 +139,10 @@ namespace testeNav.Areas.Identity.Pages.Account
                 user.PhoneNumber = Input.PhoneNumber;
                 user.Endereco = Input.Endereco;
 
-                // Salva a imagem de perfil do usuário se foi enviada
+                
                 if (imgUp != null && imgUp.Length > 0)
                 {
-                    string uploadsFolder = Path.Combine(_caminho, "img");
+                    string uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "img");
 
                     if (!Directory.Exists(uploadsFolder))
                     {
@@ -176,26 +159,25 @@ namespace testeNav.Areas.Identity.Pages.Account
                     user.foto = uniqueFileName;
                 }
 
-                // Cria o usuário
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    // **Novo código para definir e atribuir a role com base no Tipo de Usuário**
-                    var roleName = (Models.TipoUsuario)Input.TipodeUsuario == Models.TipoUsuario.Vendedor ? "Vendedor" : "Cliente";
+                    
+                    var roleName = Input.TipodeUsuario == TipoUsuario.Vendedor ? "Vendedor" : "Cliente";
 
-                    // Verifica se a role existe, caso contrário, cria-a
+                   
                     if (!await _roleManager.RoleExistsAsync(roleName))
                     {
                         await _roleManager.CreateAsync(new IdentityRole(roleName));
                     }
 
-                    // Atribui a role ao usuário recém-criado
+                    
                     await _userManager.AddToRoleAsync(user, roleName);
 
-                    // Continuação do código existente para enviar confirmação de email
+                    
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
@@ -208,6 +190,7 @@ namespace testeNav.Areas.Identity.Pages.Account
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
+                    
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
@@ -215,16 +198,26 @@ namespace testeNav.Areas.Identity.Pages.Account
                     else
                     {
                         await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+
+                        
+                        if (await _userManager.IsInRoleAsync(user, "Vendedor"))
+                        {
+                            return RedirectToAction("Index", "HomeVendedor");
+                        }
+                        else
+                        {
+                            return LocalRedirect(returnUrl);
+                        }
                     }
                 }
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 
-            // Se chegamos aqui, algo falhou; redisplay form
+            
             return Page();
         }
 
@@ -236,9 +229,7 @@ namespace testeNav.Areas.Identity.Pages.Account
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
-                    $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
-                    $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. Ensure it has a parameterless constructor.");
             }
         }
 

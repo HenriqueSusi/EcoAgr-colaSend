@@ -15,15 +15,15 @@ public class AccountController : Controller
         _userManager = userManager;
     }
 
-    // Método para listar todos os usuários e suas roles (como já existe)
+    
     public async Task<IActionResult> ListUsersWithRoles()
     {
-        var users = _userManager.Users.ToList(); // Pega todos os usuários
-        var userRoles = new List<UserRolesViewModel>(); // Cria uma lista para armazenar os usuários e suas roles
+        var users = _userManager.Users.ToList(); 
+        var userRoles = new List<UserRolesViewModel>(); 
 
         foreach (var user in users)
         {
-            var roles = await _userManager.GetRolesAsync(user); // Pega as roles do usuário
+            var roles = await _userManager.GetRolesAsync(user);
             userRoles.Add(new UserRolesViewModel
             {
                 Email = user.Email,
@@ -31,15 +31,10 @@ public class AccountController : Controller
             });
         }
 
-        return View(userRoles); // Retorna a view com a lista de usuários e roles
+        return View(userRoles); 
     }
 
-    // Novo método de registro
-    [HttpGet]
-    public IActionResult Register()
-    {
-        return View();
-    }
+
 
     [HttpPost]
     public async Task<IActionResult> Register(UserRegistrationViewModel model)
@@ -50,17 +45,24 @@ public class AccountController : Controller
             {
                 UserName = model.Email,
                 Email = model.Email,
-                TipoUsuario = model.TipoUsuario  // Atribui o tipo de usuário
+                TipoUsuario = model.TipoUsuario  
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                // Atribui a role de acordo com o tipo de usuário selecionado
+                
                 string roleName = user.TipoUsuario == TipoUsuario.Vendedor ? "Vendedor" : "Cliente";
                 await _userManager.AddToRoleAsync(user, roleName);
 
-                return RedirectToAction("Index", "Home");
+                if (user.TipoUsuario == TipoUsuario.Vendedor)
+                {
+                    return RedirectToAction("Index", "HomeVendedor");
+                }
+                else
+                {
+                    return RedirectToAction("Home", "Index");
+                }
             }
             AddErrors(result);
         }

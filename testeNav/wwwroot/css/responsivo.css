@@ -1,0 +1,136 @@
+﻿@media screen and (max-width: 767px) {
+    /* Removendo sidebar */
+
+    #sidebar{
+        display: none;
+    }
+
+    /* Container 100% */
+
+    #container {
+        margin-left: 0%;
+        width: 100%;
+        padding: 0px;
+    }
+
+    #main {
+        padding: 0px 10px;
+    }
+
+    /* Agricultor */
+
+    #agricultorDiv {
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Produtos */
+
+    .cardProduto {
+        width: 80% !important;
+        margin: 30px;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    /* Header Responsive */
+
+    .headerResponsive {
+        background-color: var(--main-green);
+        width: 100%;
+        height: 60px;
+        padding: 0px;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+
+    .first{
+        margin: 20px 0px 0px 0px;
+    }
+
+    .logo1{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .logo1 img{
+        width: 35%;
+    }
+
+    .headerResponsive i{
+        color: white;
+    }
+
+    /* Sidebar responsive */
+
+    #sidebarResponsive {
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: var(--main-green);
+        overflow-x: hidden; 
+        padding-top: 60px;
+        transition: 0.5s;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+
+    #sidebarResponsive button{
+        width: 100px;
+    }
+
+    #sidebarResponsive a, i{
+        color: white;
+    }
+
+    .navitem {  
+        display: flex;
+    }
+
+    .white{
+        display: none;
+    }
+
+    #box{
+        width: 200px;
+    }
+
+    #modal{
+        border: none;
+        margin-left: 10px;
+        width: 100%;
+    }
+
+    .line-modal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-modal {
+        margin: 0px 0px 10px 0px;
+    }
+
+    .btn-modals {
+        margin: 0px 0px 10px 0px;
+    }
+
+    .modal-footer {
+        margin-right: 20px;
+    }
+
+    #map_search{
+        flex-direction: column;
+    }
+
+    .aboutinfo img {
+        display: none;
+    }
+
+    .aboutinfo div {
+        width: 2000%;
+    }
+}
